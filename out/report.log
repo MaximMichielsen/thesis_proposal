@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.1.13)  15 MAR 2026 17:57
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.1.13)  15 MAR 2026 20:37
  restricted system commands enabled.
  file:line:error style messages enabled.
 **report.tex
@@ -313,48 +313,54 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: luatex.def on input line 106.
 
 (C:/Users/poopy/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def
-File: luatex.def 2025/09/29 v1.2f Graphics/color driPrograms\MiKTeX\tex/latex/graphics\mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
-Package xcolor Info: Model `RGB' extended on input line 1365.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+File: luatex.def 2025/09/29 v1.2f Graphics/color driver for luatex
 ))
-\AM@pagewidth=\dimen263
-\AM@pageheight=\dimen264
-\AM@fboxrule=\dimen265
+\Gin@req@height=\dimen194
+\Gin@req@width=\dimen195
+) (C:/Users/poopy/AppData/Local/Programs/MiKTeX/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count324
+\float@exts=\toks27
+\float@box=\box71
+\@float@everytoks=\toks28
+\@floatcapt=\box72
+)
+(C:/Users/poopy/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
-(C:\Users\poopy\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
-File: pppdftex.def 2025/07/23 v0.6g Pdfpages driver for pdfTeX (AM)
+(C:/Users/poopy/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen196
+\captionmargin=\dimen197
+\caption@leftmargin=\dimen198
+\caption@rightmargin=\dimen199
+\caption@width=\dimen256
+\caption@indent=\dimen257
+\caption@parindent=\dimen258
+\caption@hangindent=\dimen259
+Package caption Info: Standard document class detected.
 )
-\pdfpages@includegraphics@status=\count331
-\AM@pagebox=\box73
-\AM@global@opts=\toks28
-\AM@pagecnt=\count332
-\AM@toc@title=\toks29
-\AM@lof@heading=\toks30
-\c@AM@survey=\count333
-\AM@templatesizebox=\box74
-) (C:\Users\poopy\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+\c@caption@flags=\count325
+\c@continuedfloat=\count326
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
 
-(C:\Users\poopy\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)
-(C:\Users\poopy\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
-keys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(C:\Users\poopy\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+(C:/Users/poopy/AppData/Local/Programs/MiKTeX/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)) (C:/Users/poopy/AppData/Local/Programs/MiKTeX/tex/latex/caption/subcaption.s
 ty
-Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (C:\Users\poopy\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
-Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)ic (RN)
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count327
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count328
+) (C:/Users/poopy/AppData/Local/Programs/MiKTeX/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2025/07/23 v0.6g Insert pages of external PDF documents (AM)
+(C:/Users/poopy/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(C:/Users/poopy/AppData/Local/Programs/MiKTeX/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
 \ESO@tempdima=\dimen260
 \ESO@tempdimb=\dimen261
 
@@ -1648,9 +1654,11 @@ h' as default language. on input line 24.
 \@quotelevel=\count579
 \@quotereset=\count580
 
-No file report.aux.
-
+(C:/Users/poopy/PycharmProjects/thesis_proposal/out/report.aux
+\g__glossaries_gls_ref_acronym_int=\count581
+)
 \openout1 = report.aux
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
@@ -1683,16 +1691,16 @@ or `english'. on input line 24.
 (C:/Users/poopy/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count581
+\scratchcounter=\count582
 \scratchdimen=\dimen364
 \scratchbox=\box97
-\nofMPsegments=\count582
-\nofMParguments=\count583
+\nofMPsegments=\count583
+\nofMParguments=\count584
 \everyMPshowfont=\toks62
-\MPscratchCnt=\count584
+\MPscratchCnt=\count585
 \MPscratchDim=\dimen365
-\MPnumerator=\count585
-\makeMPintoPDFobject=\count586
+\MPnumerator=\count586
+\makeMPintoPDFobject=\count587
 \everyMPtoPDFconversion=\toks63
 )
 (C:/Users/poopy/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
@@ -1725,6 +1733,9 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 Package hyperref Info: Link coloring ON on input line 24.
+
+(C:/Users/poopy/PycharmProjects/thesis_proposal/out/report.out)
+(C:/Users/poopy/PycharmProjects/thesis_proposal/out/report.out)
 \@outlinefile=\write5
 
 \openout5 = report.out
@@ -1826,7 +1837,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 24.
-\c@lstlisting=\count587
+\c@lstlisting=\count588
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -1841,33 +1852,22 @@ Package biblatex Info: Automatic encoding selection.
 
 \openout4 = report.bcf
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'report.bbl' not found.
-
-No file report.bbl.
+Package biblatex Info: ... file 'report.bbl' found.
+ (C:/Users/poopy/PycharmProjects/thesis_proposal/out/report.bbl)
 Package biblatex Info: Reference section=0 on input line 24.
 Package biblatex Info: Reference segment=0 on input line 24.
-
-LaTeX Warning: File `figures/smoke-2.jpg' not found on input line 40.
-
-
-./report.tex:40: Package luatex.def Error: File `figures/smoke-2.jpg' not found
-: using draft setting.
-
-See the luatex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 \makecover
-               
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<figures/cover/logo-white.pdf, id=6, 114.08723pt x 45.99081pt>
+<figures/cover/smoke.jpg, id=86, 3468.96pt x 5203.44pt>
+File: figures/cover/smoke.jpg Graphic file (type jpg)
+<use figures/cover/smoke.jpg>
+Package luatex.def Info: figures/cover/smoke.jpg  used on input line 40.
+(luatex.def)             Requested size: 597.50787pt x 896.24463pt.
+<figures/cover/logo-white.pdf, id=87, 114.08723pt x 45.99081pt>
 File: figures/cover/logo-white.pdf Graphic file (type pdf)
 <use figures/cover/logo-white.pdf>
 Package luatex.def Info: figures/cover/logo-white.pdf  used on input line 40.
 (luatex.def)             Requested size: 156.84854pt x 63.23299pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
+
 
 (C:/Users/poopy/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1882,8 +1882,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {C:/Users/poopy/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}<./figures/cove
-r/logo-white.pdf>] (./frontmatter/title-report.tex
-<figures/cover/logo-black.pdf, id=19, 114.08723pt x 45.99081pt>
+r/smoke.jpg><./figures/cover/logo-white.pdf>]
+(./frontmatter/title-report.tex
+<figures/cover/logo-black.pdf, id=99, 114.08723pt x 45.99081pt>
 File: figures/cover/logo-black.pdf Graphic file (type pdf)
 <use figures/cover/logo-black.pdf>
 Package luatex.def Info: figures/cover/logo-black.pdf  used on input line 62.
@@ -1893,41 +1894,26 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
 [1
 
 <./figures/cover/logo-black.pdf>])
-No file report.toc.
+(C:/Users/poopy/PycharmProjects/thesis_proposal/out/report.toc)
 \tf@toc=\write6
 
 \openout6 = report.toc
+
 (./frontmatter/nomenclature.tex
 warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
 [1
 
 ]
 
-Package glossaries Warning: Empty glossary for \printnoidxglossary[type={acrony
-m}]. Rerun may be required (or you may have forgotten to use commands like \gls
-) on input line 10.
+Package glossaries Info: Preparing to sort glossary `acronym' (total number of
+(glossaries)             referenced entries: 27)
 
-) [2
+[2
 
-] (./mainmatter/introduction.tex
+]) [3] (./mainmatter/introduction.tex
 Chapter 1.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 3.
-
-LaTeX Warning: Citation 'Robijns2019' on page 1 undefined on input line 10.
-
-
-LaTeX Warning: Citation 'Janssens2019' on page 1 undefined on input line 10.
-
-
-LaTeX Warning: Citation 'Rajampeta2021' on page 1 undefined on input line 10.
-
-
-LaTeX Warning: Citation 'Bettini2023' on page 1 undefined on input line 10.
-
-
-LaTeX Warning: Citation 'Krochak2024' on page 1 undefined on input line 10.
-
 [1
 
 
@@ -1945,270 +1931,61 @@ Overfull \hbox (1.16975pt too wide) in paragraph at lines 63--64
 , and decision-making, and is cur-rently rapidly
  []
 
-[6] [7]
+[6] [7] [8] [9] [10] [11] [12]) (./mainmatter/research_plan.tex [13]
+Chapter 4.
+[14
 
-LaTeX Warning: Reference `ch:description' on page 8 undefined on input line 109
-.
+] [15]) [16] (./appendix/mlp.tex [17
 
-[8]
+]
+Appendix A.
+[18
 
-LaTeX Warning: Reference `ch:description' on page 9 undefined on input line 129
-.
-
-[9]
-
-LaTeX Warning: Citation 'Kostrikov2021' on page 10 undefined on input line 148.
-
-
-
-LaTeX Warning: Citation 'kumar2020' on page 10 undefined on input line 156.
-
-[10]
-
-LaTeX Warning: Citation 'Fujimoto2018' on page 11 undefined on input line 166.
-
-
-LaTeX Warning: Citation 'Fujimoto2021' on page 11 undefined on input line 177.
-
-[11]
-
-LaTeX Warning: Citation 'Robijns2019' on page 12 undefined on input line 205.
-
-
-LaTeX Warning: Citation 'Janssens2019' on page 12 undefined on input line 207.
-
-
-LaTeX Warning: Citation 'Pusuluri2020' on page 12 undefined on input line 211.
-
-
-LaTeX Warning: Citation 'Rajampeta2021' on page 12 undefined on input line 213.
-
-
-
-LaTeX Warning: Citation 'Bettini2023' on page 12 undefined on input line 215.
-
-[12]
-
-LaTeX Warning: Citation 'Krochak2024' on page 13 undefined on input line 217.
-
-) (./mainmatter/research_plan.tex
-
-./mainmatter/research_plan.tex:5: LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \documentclass
-                  [11pt]{article}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./mainmatter/research_plan.tex:8: LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 \usepackage
-               {amsmath}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./mainmatter/research_plan.tex:11: LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 \begin{document}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Package glossaries Warning: entry `cfd' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `les' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `vms' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `ann' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `rans' indexing changed since previous run (o
-r no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `dns' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `cpi' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `lti' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `ml' indexing changed since previous run (or 
-no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `lfs' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `cfl' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `mlp' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `cnn' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `rnn' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `fem' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `sgs' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `rl' indexing changed since previous run (or 
-no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `av' indexing changed since previous run (or 
-no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `pde' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `ai' indexing changed since previous run (or 
-no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `iql' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `cql' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `gav' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `lav' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `ood' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `td3' indexing changed since previous run (or
- no previous run) on input line 15.
-
-
-Package glossaries Warning: entry `td3bc' indexing changed since previous run (
-or no previous run) on input line 15.
-
-
-Package glossaries Warning: Rerun required to get \printnoidxglossary up to dat
-e on input line 15.
-
-[13] (C:/Users/poopy/PycharmProjects/thesis_proposal/out/report.aux
-\g__glossaries_gls_ref_acronym_int=\count588
-)
+] [19] [20]) [21]
+(C:/Users/poopy/PycharmProjects/thesis_proposal/out/report.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  79E110CB4163FCFFE93A78191BE14BA5;2509.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                report
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 28567EFBA6EBC3C9232BCA5832A6CD2E;3106.
 Package logreq Info: Writing requests to 'report.run.xml'.
 
 \openout1 = report.run.xml
-))
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 11 (\begingroup)
-### bottom level
+)
 
 Here is how much of LuaTeX's memory you used:
- 51963 strings out of 476081
+ 52294 strings out of 476081
  100000,2373549 words of node,token memory allocated
- 11870 words of node memory still in use:
-   223 hlist, 23 vlist, 2 rule, 18 disc, 14 local_par, 318 glue, 17 kern, 27 pen
-alty, 223 glyph, 796 attribute, 120 glue_spec, 796 attribute_list, 16 write, 14 
-save_pos, 469 pdf_literal, 14 pdf_colorstack nodes
-   avail lists: 1:3,2:774,3:388,4:92,5:709,6:36,7:7765,8:51,9:430,10:18,11:663
- 73361 multiletter control sequences out of 65536+600000
- 85 fonts using 24902319 bytes
- 99i,12n,105p,2541b,1307s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<./fonts/cambria/CAMBRIAI.TTF><./fonts/cambria/CAMBRIAB.TTF><./fonts/cambria/CAM
-BRIA.TTC><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fonts/opentype/google/rob
-oto/robotoslab-thin.otf><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fonts/open
-type/google/roboto/robotoslab-light.otf><c:/users/poopy/appdata/local/programs/m
-iktex/fonts/opentype/public/lm/lmmono10-regular.otf><C:/Users/poopy/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/poopy/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/po
-opy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/U
-sers/poopy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pf
-b><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mr10.pfb><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmsy6.pfb><C:/Users/poopy/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/poopy/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (17 pages, 258331 bytes).
+ 23117 words of node memory still in use:
+   428 hlist, 41 vlist, 2 rule, 42 disc, 26 local_par, 6 math, 640 glue, 53 kern
+, 54 penalty, 538 glyph, 1493 attribute, 122 glue_spec, 1493 attribute_list, 28 
+write, 26 save_pos, 871 pdf_literal, 3 pdf_action, 26 pdf_colorstack nodes
+   avail lists: 1:2,2:915,3:558,4:254,5:688,6:57,7:7119,8:60,9:542,10:18,11:640
+ 73584 multiletter control sequences out of 65536+600000
+ 90 fonts using 28016983 bytes
+ 99i,12n,105p,2541b,1352s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/users/poopy/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono10-
+regular.otf><./fonts/cambria/CAMBRIAZ.TTF><./fonts/cambria/CAMBRIAI.TTF><./fonts
+/cambria/CAMBRIAB.TTF><./fonts/cambria/CAMBRIA.TTC><C:/Users/poopy/AppData/Local
+/Programs/MiKTeX/fonts/opentype/google/roboto/robotoslab-thin.otf><C:/Users/poop
+y/AppData/Local/Programs/MiKTeX/fonts/opentype/google/roboto/robotoslab-light.ot
+f><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mex10.pfb><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmmi6.pfb><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/poopy/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/poopy/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/poopy/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/poopy/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/poop
+y/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Use
+rs/poopy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
+0.pfb>
+Output written on report.pdf (26 pages, 1857064 bytes).
 
-PDF statistics: 218 PDF objects out of 1000 (max. 8388607)
- 62 named destinations out of 1000 (max. 1048576)
- 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 483 PDF objects out of 1000 (max. 8388607)
+ 139 named destinations out of 1000 (max. 1048576)
+ 176 words of extra memory for PDF output out of 10000 (max. 100000000)
 

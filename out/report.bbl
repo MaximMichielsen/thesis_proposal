@@ -1,0 +1,380 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Bettini2023}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=5b55a8206f0401bf8246a7dadec74b59}{%
+           family={Bettini},
+           familyi={B\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Delft University of Technology}%
+      }
+      \strng{namehash}{5b55a8206f0401bf8246a7dadec74b59}
+      \strng{fullhash}{5b55a8206f0401bf8246a7dadec74b59}
+      \strng{fullhashraw}{5b55a8206f0401bf8246a7dadec74b59}
+      \strng{bibnamehash}{5b55a8206f0401bf8246a7dadec74b59}
+      \strng{authorbibnamehash}{5b55a8206f0401bf8246a7dadec74b59}
+      \strng{authornamehash}{5b55a8206f0401bf8246a7dadec74b59}
+      \strng{authorfullhash}{5b55a8206f0401bf8246a7dadec74b59}
+      \strng{authorfullhashraw}{5b55a8206f0401bf8246a7dadec74b59}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{title}{Energy-Conservative Data-Driven Modelling for the two-scale Navier-Stokes Equations}
+      \field{type}{techreport}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb http://repository.tudelft.nl/.
+      \endverb
+      \verb{url}
+      \verb http://repository.tudelft.nl/.
+      \endverb
+    \endentry
+    \entry{Fujimoto2021}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=064fb8795fb3fe6537e4d29fc8578ec4}{%
+           family={Fujimoto},
+           familyi={F\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c6ad9b4948652ebe5c60d3cf11dfc28d}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Shixiang\bibnamedelima Shane},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2167e69c9c944ad00f8aba80f59a5ee5}
+      \strng{fullhash}{2167e69c9c944ad00f8aba80f59a5ee5}
+      \strng{fullhashraw}{2167e69c9c944ad00f8aba80f59a5ee5}
+      \strng{bibnamehash}{2167e69c9c944ad00f8aba80f59a5ee5}
+      \strng{authorbibnamehash}{2167e69c9c944ad00f8aba80f59a5ee5}
+      \strng{authornamehash}{2167e69c9c944ad00f8aba80f59a5ee5}
+      \strng{authorfullhash}{2167e69c9c944ad00f8aba80f59a5ee5}
+      \strng{authorfullhashraw}{2167e69c9c944ad00f8aba80f59a5ee5}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Offline reinforcement learning (RL) defines the task of learning from a fixed batch of data. Due to errors in value estimation from out-of-distribution actions, most offline RL algorithms take the approach of constraining or regularizing the policy with the actions contained in the dataset. Built on pre-existing RL algorithms, modifications to make an RL algorithm work offline comes at the cost of additional complexity. Offline RL algorithms introduce new hyperparameters and often leverage secondary components such as generative models, while adjusting the underlying RL algorithm. In this paper we aim to make a deep RL algorithm work while making minimal changes. We find that we can match the performance of state-of-the-art offline RL algorithms by simply adding a behavior cloning term to the policy update of an online RL algorithm and normalizing the data. The resulting algorithm is a simple to implement and tune baseline, while more than halving the overall run time by removing the additional computational overhead of previous methods.}
+      \field{month}{12}
+      \field{title}{A Minimalist Approach to Offline Reinforcement Learning}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2106.06860
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2106.06860
+      \endverb
+    \endentry
+    \entry{Fujimoto2018}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=064fb8795fb3fe6537e4d29fc8578ec4}{%
+           family={Fujimoto},
+           familyi={F\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f2db100b30806f7c8e894892db68dadb}{%
+           family={Hoof},
+           familyi={H\bibinitperiod},
+           given={Herke},
+           giveni={H\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=a5137015bf373eff6cd1b6a96b145c3c}{%
+           family={Meger},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{fa31fcf8611ccec7d2a280d8c08326e7}
+      \strng{fullhash}{fa31fcf8611ccec7d2a280d8c08326e7}
+      \strng{fullhashraw}{fa31fcf8611ccec7d2a280d8c08326e7}
+      \strng{bibnamehash}{fa31fcf8611ccec7d2a280d8c08326e7}
+      \strng{authorbibnamehash}{fa31fcf8611ccec7d2a280d8c08326e7}
+      \strng{authornamehash}{fa31fcf8611ccec7d2a280d8c08326e7}
+      \strng{authorfullhash}{fa31fcf8611ccec7d2a280d8c08326e7}
+      \strng{authorfullhashraw}{fa31fcf8611ccec7d2a280d8c08326e7}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In value-based reinforcement learning methods such as deep Q-learning, function approximation errors are known to lead to overestimated value estimates and suboptimal policies. We show that this problem persists in an actor-critic setting and propose novel mechanisms to minimize its effects on both the actor and the critic. Our algorithm builds on Double Q-learning, by taking the minimum value between a pair of critics to limit overestimation. We draw the connection between target networks and overestimation bias, and suggest delaying policy updates to reduce per-update error and further improve performance. We evaluate our method on the suite of OpenAI gym tasks, outperforming the state of the art in every environment tested.}
+      \field{month}{10}
+      \field{title}{Addressing Function Approximation Error in Actor-Critic Methods}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1802.09477
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1802.09477
+      \endverb
+    \endentry
+    \entry{Janssens2019}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=536607e2e377337d1c46db6ccd15ead1}{%
+           family={Janssens},
+           familyi={J\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Delft University of Technology}%
+      }
+      \strng{namehash}{536607e2e377337d1c46db6ccd15ead1}
+      \strng{fullhash}{536607e2e377337d1c46db6ccd15ead1}
+      \strng{fullhashraw}{536607e2e377337d1c46db6ccd15ead1}
+      \strng{bibnamehash}{536607e2e377337d1c46db6ccd15ead1}
+      \strng{authorbibnamehash}{536607e2e377337d1c46db6ccd15ead1}
+      \strng{authornamehash}{536607e2e377337d1c46db6ccd15ead1}
+      \strng{authorfullhash}{536607e2e377337d1c46db6ccd15ead1}
+      \strng{authorfullhashraw}{536607e2e377337d1c46db6ccd15ead1}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{title}{Machine Learning of Atmospheric Turbulence in a Variational Multiscale Model}
+      \field{type}{techreport}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb http://repository.tudelft.nl/.
+      \endverb
+      \verb{url}
+      \verb http://repository.tudelft.nl/.
+      \endverb
+    \endentry
+    \entry{Kostrikov2021}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=36c384c0d52c2e0b0d8bc9f99b9fc985}{%
+           family={Kostrikov},
+           familyi={K\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=11da5648e511dd395cb7a130703e2a9a}{%
+           family={Nair},
+           familyi={N\bibinitperiod},
+           given={Ashvin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c9545da54b33744da25943cdf66eadac}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{841bcf986d7839737409c116944dd0ac}
+      \strng{fullhash}{841bcf986d7839737409c116944dd0ac}
+      \strng{fullhashraw}{841bcf986d7839737409c116944dd0ac}
+      \strng{bibnamehash}{841bcf986d7839737409c116944dd0ac}
+      \strng{authorbibnamehash}{841bcf986d7839737409c116944dd0ac}
+      \strng{authornamehash}{841bcf986d7839737409c116944dd0ac}
+      \strng{authorfullhash}{841bcf986d7839737409c116944dd0ac}
+      \strng{authorfullhashraw}{841bcf986d7839737409c116944dd0ac}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Offline reinforcement learning requires reconciling two conflicting aims: learning a policy that improves over the behavior policy that collected the dataset, while at the same time minimizing the deviation from the behavior policy so as to avoid errors due to distributional shift. This trade-off is critical, because most current offline reinforcement learning methods need to query the value of unseen actions during training to improve the policy, and therefore need to either constrain these actions to be in-distribution, or else regularize their values. We propose an offline RL method that never needs to evaluate actions outside of the dataset, but still enables the learned policy to improve substantially over the best behavior in the data through generalization. The main insight in our work is that, instead of evaluating unseen actions from the latest policy, we can approximate the policy improvement step implicitly by treating the state value function as a random variable, with randomness determined by the action (while still integrating over the dynamics to avoid excessive optimism), and then taking a state conditional upper expectile of this random variable to estimate the value of the best actions in that state. This leverages the generalization capacity of the function approximator to estimate the value of the best available action at a given state without ever directly querying a Q-function with this unseen action. Our algorithm alternates between fitting this upper expectile value function and backing it up into a Q-function. Then, we extract the policy via advantage-weighted behavioral cloning. We dub our method implicit Q-learning (IQL). IQL demonstrates the state-of-the-art performance on D4RL, a standard benchmark for offline reinforcement learning. We also demonstrate that IQL achieves strong performance fine-tuning using online interaction after offline initialization.}
+      \field{month}{10}
+      \field{title}{Offline Reinforcement Learning with Implicit Q-Learning}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2110.06169
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2110.06169
+      \endverb
+    \endentry
+    \entry{Krochak2024}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=3cb9fcc077f60ef7102b7f2329a96c79}{%
+           family={Krochak},
+           familyi={K\bibinitperiod},
+           given={Oleksandr},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Delft University of Technology}%
+      }
+      \strng{namehash}{3cb9fcc077f60ef7102b7f2329a96c79}
+      \strng{fullhash}{3cb9fcc077f60ef7102b7f2329a96c79}
+      \strng{fullhashraw}{3cb9fcc077f60ef7102b7f2329a96c79}
+      \strng{bibnamehash}{3cb9fcc077f60ef7102b7f2329a96c79}
+      \strng{authorbibnamehash}{3cb9fcc077f60ef7102b7f2329a96c79}
+      \strng{authornamehash}{3cb9fcc077f60ef7102b7f2329a96c79}
+      \strng{authorfullhash}{3cb9fcc077f60ef7102b7f2329a96c79}
+      \strng{authorfullhashraw}{3cb9fcc077f60ef7102b7f2329a96c79}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{Data-Driven Closure Modelling of the Navier-Stokes Momentum Equations}
+      \field{type}{techreport}
+      \field{year}{2024}
+    \endentry
+    \entry{kumar2020}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=976765a796e51c8e6a84c5ea053dd59d}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Aviral},
+           giveni={A\bibinitperiod}}}%
+        {{hash=519033a7338e5ef684c77d4d04748a4a}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Aurick},
+           giveni={A\bibinitperiod}}}%
+        {{hash=641a3f5d5ce834c4b56fb672c5df0207}{%
+           family={Tucker},
+           familyi={T\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c9545da54b33744da25943cdf66eadac}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d8b33c389094e2e20e901a8a383192a7}
+      \strng{fullhash}{ad0c8ab01480d4997f655bcb1d8fdc86}
+      \strng{fullhashraw}{ad0c8ab01480d4997f655bcb1d8fdc86}
+      \strng{bibnamehash}{d8b33c389094e2e20e901a8a383192a7}
+      \strng{authorbibnamehash}{d8b33c389094e2e20e901a8a383192a7}
+      \strng{authornamehash}{d8b33c389094e2e20e901a8a383192a7}
+      \strng{authorfullhash}{ad0c8ab01480d4997f655bcb1d8fdc86}
+      \strng{authorfullhashraw}{ad0c8ab01480d4997f655bcb1d8fdc86}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Conservative Q-Learning for Offline Reinforcement Learning}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2006.04779
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2006.04779
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2006.04779
+      \endverb
+    \endentry
+    \entry{Pusuluri2020}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=a84f0292efd7277b3029109d0ff133f6}{%
+           family={Pusuluri},
+           familyi={P\bibinitperiod},
+           given={Abhinand},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Delft University of Technology}%
+      }
+      \strng{namehash}{a84f0292efd7277b3029109d0ff133f6}
+      \strng{fullhash}{a84f0292efd7277b3029109d0ff133f6}
+      \strng{fullhashraw}{a84f0292efd7277b3029109d0ff133f6}
+      \strng{bibnamehash}{a84f0292efd7277b3029109d0ff133f6}
+      \strng{authorbibnamehash}{a84f0292efd7277b3029109d0ff133f6}
+      \strng{authornamehash}{a84f0292efd7277b3029109d0ff133f6}
+      \strng{authorfullhash}{a84f0292efd7277b3029109d0ff133f6}
+      \strng{authorfullhashraw}{a84f0292efd7277b3029109d0ff133f6}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{Ad Noise-augmented offine training of ANN unresolved scale models}
+      \field{type}{techreport}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb http://repository.tudelft.nl/.
+      \endverb
+      \verb{url}
+      \verb http://repository.tudelft.nl/.
+      \endverb
+    \endentry
+    \entry{Rajampeta2021}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=52f3376705404f0eba51f311526c59c8}{%
+           family={Rajampeta},
+           familyi={R\bibinitperiod},
+           given={V\bibnamedelima S\bibnamedelima K},
+           giveni={V\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Delft University of Technology}%
+      }
+      \strng{namehash}{52f3376705404f0eba51f311526c59c8}
+      \strng{fullhash}{52f3376705404f0eba51f311526c59c8}
+      \strng{fullhashraw}{52f3376705404f0eba51f311526c59c8}
+      \strng{bibnamehash}{52f3376705404f0eba51f311526c59c8}
+      \strng{authorbibnamehash}{52f3376705404f0eba51f311526c59c8}
+      \strng{authornamehash}{52f3376705404f0eba51f311526c59c8}
+      \strng{authorfullhash}{52f3376705404f0eba51f311526c59c8}
+      \strng{authorfullhashraw}{52f3376705404f0eba51f311526c59c8}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Master Thesis Stabilization Strategies for a Variational Multiscale Method coupled with an Arti-ficial Neural Network}
+      \field{type}{techreport}
+      \field{year}{2021}
+    \endentry
+    \entry{Robijns2019}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=ab0b9d013b97b1095fdaf36a2fc25bdb}{%
+           family={Robijns},
+           familyi={R\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Delft University of Technology}%
+      }
+      \strng{namehash}{ab0b9d013b97b1095fdaf36a2fc25bdb}
+      \strng{fullhash}{ab0b9d013b97b1095fdaf36a2fc25bdb}
+      \strng{fullhashraw}{ab0b9d013b97b1095fdaf36a2fc25bdb}
+      \strng{bibnamehash}{ab0b9d013b97b1095fdaf36a2fc25bdb}
+      \strng{authorbibnamehash}{ab0b9d013b97b1095fdaf36a2fc25bdb}
+      \strng{authornamehash}{ab0b9d013b97b1095fdaf36a2fc25bdb}
+      \strng{authorfullhash}{ab0b9d013b97b1095fdaf36a2fc25bdb}
+      \strng{authorfullhashraw}{ab0b9d013b97b1095fdaf36a2fc25bdb}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{A Machine Learning Approach to Unresolved-Scale Modeling for Burgers' Equation}
+      \field{type}{techreport}
+      \field{year}{2019}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

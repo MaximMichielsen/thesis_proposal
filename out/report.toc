@@ -19,4 +19,12 @@
 \contentsline {section}{\numberline {3.4}CFD-ANN Enriched Models}{11}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Other work}{11}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Past Work at TU Delft}{12}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {4}Research Plan}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Proposal}{14}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Project Plan}{15}{section.4.2}%
+\addvspace {0.8\baselineskip }
+\contentsline {chapter}{References}{17}{chapter*.23}%
+\contentsline {chapter}{\numberline {A}MLP Extensive Explanation}{18}{appendix.A}%
+\contentsline {subsubsection}{Two-Layer Multilayer Perceptron Architecture}{19}{section*.25}%
+\contentsline {subsubsection}{Training an MLP Model}{19}{equation.A.9}%
 \contentsfinish 

@@ -1,15 +1,107 @@
-%! Author = poopy
-%! Date = 15/03/2026
+\chapter{Research Plan} \label{ch:research_plan}
 
-% Preamble
-\documentclass[11pt]{article}
+\section{Proposal} \label{sec:proposal}
 
-% Packages
-\usepackage{amsmath}
+\todo[inline]{Possible to remove the accuracy part from the proposal}
 
-% Document
-\begin{document}
+\begin{bluebox}{Research Proposal}
+    \noindent To investigate the effectiveness of an artificial viscosity term in improving the stability of online, data-driven \gls{les}-\gls{vms} simulations applied to the one-dimensional Burgers equation, using reinforcement learning.
+\end{bluebox}
 
+From the proposal, the primary research question states:
 
+\begin{enumerate}[label=\textbf{\color{titlecolor}PRQ:}]
+    \item \textit{To what extent can an artificial viscosity term\todo{name it term or corrector?} improve the stability and accuracy of VMS-ANN closure models applied to the one-dimensional Burgers equation?}
+\end{enumerate}
 
-\end{document}
+With subsequent research questions:
+
+\begin{enumerate}[label=\textbf{\color{titlecolor}RQ\arabic*.}]
+
+%    \item \textbf{Question 1}
+%    \begin{enumerate}[label=\textbf{\color{titlecolor}SQ\arabic{enumi}.\alph*so}]
+%        \item Subquestion 1.1
+%        \item
+%    \end{enumerate}
+
+    \item \textit{How does the \gls{av} term affect numerical stability across a range of coarse-grid resolutions compared to a no-\gls{av} baseline model?}
+
+    \item \textit{How does the artificial viscosity term affect the energy dissipation and resolved energy evolution of the \gls{vms}-\gls{ann} model compared to theoretical dissipation levels?}
+
+    \item \textit{How does the introduction of the artificial viscosity term affect the accuracy of the \gls{vms}-\gls{ann} model compared to a no-\gls{av} baseline model?}
+        \begin{enumerate}[label=\textbf{\color{titlecolor}SQ\arabic{enumi}.\alph*}]
+        \item \textit{How does the artificial viscosity term affect the correlation of the resolved flow solution with \gls{dns} data, \textbf{a posteriori}?} \todo{a posteriori can be removed as we already make the distinction the AV term acts on online simulations}
+        \item \textit{Does the artificial viscosity corrector modify the input distribution observed by the fixed closure \gls{mlp}, and does this lead to observable differences in closure predictions relative to the no-\gls{av} case?}
+    \end{enumerate}
+
+    \item \textit{Does a locally applied \gls{av} term perform better in terms of accuracy and stability compared to a global one?}
+        \begin{enumerate}[label=\textbf{\color{titlecolor}SQ\arabic{enumi}.\alph*}]
+            \item \textit{Does a local model achieve better-resolved flow correlations with DNS data than the global model?}
+            \item \textit{Can a local model perform longer, numerically stable simulations than the global model?}
+        \end{enumerate}
+\end{enumerate}
+
+\section{Project Plan} \label{sec:plan}
+
+Task list:
+
+\begin{enumerate}[label=\textbf{\color{titlecolor}\arabic*.}]
+    \item Create 1D \gls{fem} solver - 1.5 weeks
+    \begin{enumerate}[label=\textbf{\color{titlecolor}\arabic{enumi}.\alph*}]
+        \item Develop solver code
+        \item Verify solver
+    \end{enumerate}
+
+    \item Generate training data - 1.5 weeks
+    \begin{enumerate}[label=\textbf{\color{titlecolor}\arabic{enumi}.\alph*}]
+        \item Run \gls{dns}
+        \item Extract subgrid closures (project \gls{dns} data)
+    \end{enumerate}
+
+    \item Train fixed \gls{mlp} model - 1 weeks
+
+    \item Evaluate \emph{a priori} correlations between fixed model and \gls{dns} - 0.5 weeks
+
+    \item Train \gls{gav} corrector model - 2 weeks
+
+    \item Run \gls{les}-\gls{gav} model - 0.5 weeks
+
+    \item Evaluate stability and accuracy - 1 week
+
+    \item[] Prepare Midterm - $1$ week
+
+    \item[] 9 weeks → Midterm meeting
+
+    \item Train \gls{lav} corrector model - 2 weeks
+
+    \item Run \gls{lav} model - 0.5 weeks
+
+    \item Evaluate stability and accuracy - 1 week
+
+    \item[] Answer Research Questions
+
+    \item Run \gls{gav}, \gls{lav} across multiple grid sizes - 1 week
+
+    \item Evaluate numerical stability across multiple grid sizes - 1 week
+
+    \item Evaluate energy behavior - 1 week
+
+    \item Evaluate accuracy and correlations with \gls{dns} - 1 week
+
+    \item Evaluate differences between \gls{gav}, \gls{lav} and fixed \gls{mlp} - 2 week
+
+    \item Check accuracy differences between \gls{gav} and \gls{lav} - 1 week
+
+    \item Check stability duration between \gls{gav} and \gls{lav} - 1 week
+
+    \item[] 8 weeks → If successful, attempt 3D problem.
+
+    \item[] If applicable:
+
+    \item Train model for 3D environment - $3$ weeks
+
+    \item Evaluate performance of 3D problem
+
+    \item Investigate differences between 1D and 3D problems
+
+\end{enumerate}
