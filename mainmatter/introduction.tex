@@ -1,0 +1,39 @@
+\chapter{Introduction} \label{ch:introduction}
+
+\todo{Check Draft}
+% intro
+The Navier-Stokes equations describe the motion of viscous fluid substances. Although they are universally applicable to fluids, a mathematical solution to the equations is yet to be derived, and they remain as one of the millennium prize problems. Due to its complex nature, engineers instead opt to model different parts of the equations, depending on the nature of the problem they wish to simulate. For \gls{cfd}, several approaches exist, ranging in physical fidelity and computation cost, from the simplest \gls{rans} to the \gls{dns} of fluids. \gls{dns} scales rapidly with the Reynolds Number of the flow, computationally infeasible for most projects \ldots
+
+Over the years, computational power increased exceptionally fast. However, as processors are starting to reach the atomic scale, it is evident that this rapid growth of computational power might come to a halt. It is due to this expected slowing down of computation power, new, innovative methods for simulating the NS equations are needed. For \gls{les}, new approaches of coupling data-driving closure models to the numerical solver are being tested. Using projected \gls{dns} data, these data models might be able to learn the underlying physics, and become a universal model for subgrid-scale closure modeling. If successful, \gls{les} can become more practical and accurate, whilst being computationally cheaper than \gls{dns}. Ultimately, \gls{les} can be used to inform \gls{rans} in a similar fashion, improving \gls{rans} accuracy and allowing for more robust, yet relatively very cheap, simulations of fluids.
+
+% background information
+Coupling an \gls{ann} to a \gls{vms} formulation has been attempted prior. First, Robijns~\cite{Robijns2019} laid the groundworks and established the fact that strong \emph{a priori} correlations between predicted \gls{ann} closures and projected \gls{dns} closures can be achieved. However, later Janssens~\cite{Janssens2019} showed that while strong a priori correlations are possible, these are not directly translated to \emph{a posteriori} performance. In fact, using the \gls{ann} predictions led to two critical instability mechanisms: \gls{cpi} and \gls{lti}. Rajampeta~\cite{Rajampeta2021} was able to remove the \gls{cpi} from the Newton corrector passes by the use of a \gls{lfs}, and used backscatter limiting to address the \gls{lti}s. He was successful in achieving a stable online run, but backscatter limiting is unphysical in its nature, motivating future work for discovering other methods which could address the \gls{lti} problem. Bettini~\cite{Bettini2023} attempted a more energy-constrained approach, which led to over dissipative simulation runs. Krochak~\cite{Krochak2024} continued the work, attempting three different stabilization strategies, yet the \gls{lti} still remained. Dominik\ldots \todo{cite dominik}
+
+% current problem
+From previous work, it is clear that the problem of \gls{lti}s is detrimental, yet persistent. For this work, a new approach of including an additional artificial dissipation term is taken. This artificial term is intended to correct the erroneous predictions of the model, and to drain the accumulating energy, in order to hopefully bring balance to the force. \todo{Check the goal of this artificial dissipation term, is this how we are gonna use it for?}
+
+% RQ and proposal
+Continuing the persistent problem of solver instability when using \gls{vms}-\gls{ann} coupled models, the research proposal is defined as follows.
+
+\begin{bluebox}{Research Proposal}
+Research Plan
+\end{bluebox}
+
+In order to further specify the proposal, the following research questions are formulated:
+
+\begin{enumerate}[label=\textbf{\color{titlecolor}\arabic*.}]
+
+    \item \textbf{Question 1}
+    \begin{enumerate}[label=\textbf{\color{titlecolor}\arabic{enumi}.\alph*}]
+        \item Subquestion 1.1
+        \item \ldots
+    \end{enumerate}
+
+    \item \textbf{Question 2}
+
+    \item \textbf{\ldots}
+
+        
+\end{enumerate}
+
+%structure

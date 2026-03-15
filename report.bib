@@ -1,0 +1,146 @@
+%% ----------------------------------------------------------------------
+%%    Examples of common entries
+%% ----------------------------------------------------------------------
+
+@article{example-article,
+    author = {I. Surname and I. Surname and I. Surname},
+    title = {The Title of the Article},
+    journal = {The Title of the Journal},
+    volume = {1},
+    number = {2},
+    pages = {123-456},
+    year = {2000},
+    note = {}
+}
+
+@book{example-book,
+    author = {I. Surname and I. Surname and I. Surname},
+    title = {The Title of the Book},
+    publisher = {Publisher},
+    year = {2000},
+    edition = {8th ed.},
+    address = {City, State or Country},
+    note = {}
+}
+
+@online{example-website,
+    author = {{Website Name} <OR> I. Surname and I. Surname and I. Surname},
+    title = {Title of the Website},
+    url = {https://example.com},
+    urldate = {2020-12-24},
+    year = {2000}
+}
+
+%% ----------------------------------------------------------------------
+%%    Start of bibliography
+%% ----------------------------------------------------------------------
+
+@techReport{Robijns2019,
+   author = {Michel Robijns},
+   city = {Delft},
+   institution = {Delft University of Technology},
+   month = {4},
+   title = {A Machine Learning Approach to Unresolved-Scale Modeling for Burgers' Equation},
+   year = {2019}
+}
+
+@techReport{Janssens2019,
+   author = {Martin Janssens},
+   city = {Delft},
+   institution = {Delft University of Technology},
+   month = {8},
+   title = {Machine Learning of Atmospheric Turbulence in a Variational Multiscale Model},
+   url = {http://repository.tudelft.nl/.},
+   year = {2019}
+}
+
+@techReport{Pusuluri2020,
+   author = {Abhinand Pusuluri},
+   city = {Delft},
+   institution = {Delft University of Technology},
+   month = {1},
+   title = {Ad Noise-augmented offine training of ANN unresolved scale models},
+   url = {http://repository.tudelft.nl/.},
+   year = {2020}
+}
+
+@techReport{Rajampeta2021,
+   author = {V S K Rajampeta},
+   city = {Delft},
+   institution = {Delft University of Technology},
+   month = {10},
+   title = {Master Thesis Stabilization Strategies for a Variational Multiscale Method coupled with an Arti-ficial Neural Network},
+   year = {2021}
+}
+
+@techReport{Krochak2024,
+   author = {Oleksandr Krochak},
+   city = {Delft},
+   institution = {Delft University of Technology},
+   month = {9},
+   title = {Data-Driven Closure Modelling of the Navier-Stokes Momentum Equations},
+   year = {2024}
+}
+
+@techReport{Bettini2023,
+   author = {Andrea Bettini},
+   city = {Delft},
+   institution = {Delft University of Technology},
+   month = {8},
+   title = {Energy-Conservative Data-Driven Modelling for the two-scale Navier-Stokes Equations},
+   url = {http://repository.tudelft.nl/.},
+   year = {2023}
+}
+
+
+@mastersthesis{Dominik2025,
+    author = {Dominik Špoljarić},
+    title = {A Posteriori Accurate
+and Stable
+Data-Driven Closure
+Modeling for the
+Two-Scale
+Navier-Stokes
+Equations},
+    school = {Delft University of Technology},
+    year = {2025},
+  type         = {Master's thesis},
+  address      = {Delft, The Netherlands},
+}
+
+@article{Fujimoto2018,
+   abstract = {In value-based reinforcement learning methods such as deep Q-learning, function approximation errors are known to lead to overestimated value estimates and suboptimal policies. We show that this problem persists in an actor-critic setting and propose novel mechanisms to minimize its effects on both the actor and the critic. Our algorithm builds on Double Q-learning, by taking the minimum value between a pair of critics to limit overestimation. We draw the connection between target networks and overestimation bias, and suggest delaying policy updates to reduce per-update error and further improve performance. We evaluate our method on the suite of OpenAI gym tasks, outperforming the state of the art in every environment tested.},
+   author = {Scott Fujimoto and Herke van Hoof and David Meger},
+   month = {10},
+   title = {Addressing Function Approximation Error in Actor-Critic Methods},
+   url = {http://arxiv.org/abs/1802.09477},
+   year = {2018}
+}
+
+@article{Fujimoto2021,
+   abstract = {Offline reinforcement learning (RL) defines the task of learning from a fixed batch of data. Due to errors in value estimation from out-of-distribution actions, most offline RL algorithms take the approach of constraining or regularizing the policy with the actions contained in the dataset. Built on pre-existing RL algorithms, modifications to make an RL algorithm work offline comes at the cost of additional complexity. Offline RL algorithms introduce new hyperparameters and often leverage secondary components such as generative models, while adjusting the underlying RL algorithm. In this paper we aim to make a deep RL algorithm work while making minimal changes. We find that we can match the performance of state-of-the-art offline RL algorithms by simply adding a behavior cloning term to the policy update of an online RL algorithm and normalizing the data. The resulting algorithm is a simple to implement and tune baseline, while more than halving the overall run time by removing the additional computational overhead of previous methods.},
+   author = {Scott Fujimoto and Shixiang Shane Gu},
+   month = {12},
+   title = {A Minimalist Approach to Offline Reinforcement Learning},
+   url = {http://arxiv.org/abs/2106.06860},
+   year = {2021}
+}
+
+@article{Kostrikov2021,
+   abstract = {Offline reinforcement learning requires reconciling two conflicting aims: learning a policy that improves over the behavior policy that collected the dataset, while at the same time minimizing the deviation from the behavior policy so as to avoid errors due to distributional shift. This trade-off is critical, because most current offline reinforcement learning methods need to query the value of unseen actions during training to improve the policy, and therefore need to either constrain these actions to be in-distribution, or else regularize their values. We propose an offline RL method that never needs to evaluate actions outside of the dataset, but still enables the learned policy to improve substantially over the best behavior in the data through generalization. The main insight in our work is that, instead of evaluating unseen actions from the latest policy, we can approximate the policy improvement step implicitly by treating the state value function as a random variable, with randomness determined by the action (while still integrating over the dynamics to avoid excessive optimism), and then taking a state conditional upper expectile of this random variable to estimate the value of the best actions in that state. This leverages the generalization capacity of the function approximator to estimate the value of the best available action at a given state without ever directly querying a Q-function with this unseen action. Our algorithm alternates between fitting this upper expectile value function and backing it up into a Q-function. Then, we extract the policy via advantage-weighted behavioral cloning. We dub our method implicit Q-learning (IQL). IQL demonstrates the state-of-the-art performance on D4RL, a standard benchmark for offline reinforcement learning. We also demonstrate that IQL achieves strong performance fine-tuning using online interaction after offline initialization.},
+   author = {Ilya Kostrikov and Ashvin Nair and Sergey Levine},
+   month = {10},
+   title = {Offline Reinforcement Learning with Implicit Q-Learning},
+   url = {http://arxiv.org/abs/2110.06169},
+   year = {2021}
+}
+
+@misc{kumar2020,
+      title={Conservative Q-Learning for Offline Reinforcement Learning},
+      author={Aviral Kumar and Aurick Zhou and George Tucker and Sergey Levine},
+      year={2020},
+      eprint={2006.04779},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2006.04779},
+}

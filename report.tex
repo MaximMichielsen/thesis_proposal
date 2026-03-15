@@ -1,0 +1,81 @@
+\documentclass[11pt]{tudelft-report}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{report.bib}
+
+% Spacing
+\usepackage{setspace}
+\AtBeginDocument{\setstretch{1.3}}
+
+% Paragraph spacing (choose one approach)
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{8pt}
+% \usepackage{parskip}  ← don't use this if setting manually above
+
+\usepackage{amstext}
+\usepackage{todonotes}
+
+\setlist{itemsep=-2pt}
+\renewcommand{\deg}{\si{\degree}\xspace}
+
+%% ----------------------------------------------------------------------
+%%    Begin of document + Frontmatter (Roman page numbering)
+%% ----------------------------------------------------------------------
+
+\begin{document}
+
+\frontmatter
+
+%% Define the main parameters
+\title{Data-Driven VMS-LES Modeling}
+\subtitle{An Overview of its History \& Future}
+\author{Maxim Michielsen}
+
+\subject{M.Sc. Thesis: Research Proposal} % Cover only
+\affiliation{Delft University of Technology} % Cover only
+\coverimage{figures/smoke.jpg} % Aspect ratio of 2:3 (portrait) recommended
+
+
+{
+\coverfont
+\makecover
+}
+
+\input{frontmatter/title-report}
+%\input{frontmatter/summary}
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+\input{frontmatter/nomenclature}
+
+%% ----------------------------------------------------------------------
+%%    Mainmatter (Arabic page numbering)
+%% ----------------------------------------------------------------------
+\mainmatter
+
+\input{mainmatter/introduction}
+\input{mainmatter/problem_description}
+\input{mainmatter/literature}
+\input{mainmatter/research_plan}
+
+
+%% Prevent urls running into margins in bibliography
+\setcounter{biburlnumpenalty}{7000}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{7000}
+
+%% Add bibliography
+\addtocontents{toc}{\protect\addvspace{0.8\baselineskip}}
+\printbibliography[heading=bibintoc,title=References]
+
+%% ----------------------------------------------------------------------
+%%    Appendix (Letters for chapters)
+%% ----------------------------------------------------------------------
+\appendix
+\input{appendix/mlp}
+%\input{appendix/appendix-a}
+%\input{appendix/appendix-b}
+%\input{appendix/appendix-c} % Create file to add
+
+\end{document}

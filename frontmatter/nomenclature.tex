@@ -1,0 +1,25 @@
+\chapter*{Nomenclature}
+\addcontentsline{toc}{chapter}{Nomenclature}
+
+\section*{Abbreviations}
+
+\glsaddall[types={\acronymtype}]
+
+{
+  \renewcommand*{\glossarysection}[2][]{}
+  \printnoidxglossary[type=\acronymtype]
+}
+
+%\section*{Symbols}
+%
+%\begin{longtable}{p{2.5cm}p{8cm}p{2.5cm}}
+%    \bluetoprule
+%    Symbol & Definition & Unit \\
+%    \blueheadrule\endhead % Add Latin symbols alphabetically here:
+%    $V$ & Velocity & [m/s] \\
+%    ... \\
+%    \blueheadrule % Add Greek symbols alphabetically here:
+%    $\rho$ & Density & [kg/m$^3$] \\
+%    ... \\
+%    \bluebottomrule
+%\end{longtable}

@@ -1,0 +1,238 @@
+%A review of relevant scientific literature which describes the problem in more detail and approaches that have been used to address it. Individual publication reviews should be mostly brief, giving the highlights necessary for your argument. Publications containing concepts important for understanding your research objective and questions can be described in more detail. Longer discussions of theoretical concepts should appear in appendices. Parts 1 and 2 provide the argument for why the research objective is worthwhile.
+
+\chapter{Literature Review} \label{ch:literature}
+
+\section{Computational Fluid Dynamics} \label{sec:cfd}
+
+\todo[inline]{add citations where needed}
+
+\gls{cfd} simulations are used to solve various fluid dynamic problems. An example of applying \gls{cfd} simulations is the Navier-Stokes equations. These equations govern the flow of fluids over bodies (or without them) and are thus important in many engineering practices, from aeronautical to automotive. Unfortunately, no analytical solution exists, so engineers must approximate these equations numerically. The most accurate numerical method is \gls{dns}. Here, the solver resolves all flow scales, yielding the most accurate results but at a high computational cost. In fact, representing all scales increases computational costs very quickly. The smallest scales, also known as the Kolmogorov microscales, are all proportionate to the Reynolds number, $Re$. For three-dimensional \gls{dns}, costs are proportionate to $Re^3$. Thus, for large-scale flow problems, \gls{dns} is computationally infeasible, and it is currently used primarily as a research tool for studying turbulent phenomena.
+
+To reduce computational costs, researchers have derived a method that splits the solution into a mean and a fluctuating part. This method, called \gls{rans}, is among the least expensive simulations in the \gls{cfd} landscape. Here, the solver computes the mean solution while accounting for fluctuations through modeling. Despite various turbulence models, \gls{rans} simulations struggle to incorporate the influence of the fluctuating flow components on the mean, especially for highly dynamic and wall-bounded problems.
+
+A third method of solving fluid dynamics problems is to use \gls{les}. This method lies between the low-fidelity, cheap \gls{rans} simulations and the high-fidelity, expensive \gls{dns} simulations. Similarly to \gls{dns}, the solver resolves the flow scales, but only the largest, most influential ones. \gls{les} is thus a \gls{dns}, with a spatial filter applied, which removes the smaller, and more expensive scales. This approach makes \gls{les} much cheaper than \gls{dns}, but it does remove some physical fidelity. Naturally, if greater physical accuracy is required, the filter width can be reduced, allowing \gls{les} to approach and eventually become \gls{dns}.
+
+This approach splits up the solution into the larger scales, also known as the resolved scales, and the smaller, \gls{sgs} terms. The solver models the influence of \gls{sgs} terms. Modeling is necessary because smaller scales serve two important functions. One, they drain the flow field of energy through dissipative phenomena. Two, in specific scenarios, they re-transfer energy to the larger scales through a process known as \emph{backscatter}. The standard modeling approach is to use the Smagorinsky model. This pioneering model is relatively simple and correctly captures energy cascades in simulations, making it a great option. However, the model has several drawbacks, including limited wall behavior, no backscatter, and a tendency to be overly dissipative. Other models exist, such as the Dynamic Smagorinsky and Scale Similarity models.
+
+The problem with classical \gls{les} is that the solver applies the influence of the model to the complete flow domain, which tends to make simulations overly dissipative. A different approach, developed by Hughes, uses the variational multiscale framework.
+
+\subsection{Variational Multiscale Framework} \label{subsec:vms}
+% some sources:
+% https://pmc.ncbi.nlm.nih.gov/articles/PMC7172227/
+% https://www.oden.utexas.edu/media/reports/2004/0446.pdf
+% https://www.sciencedirect.com/science/article/pii/S0045793010000319
+% https://ntrs.nasa.gov/api/citations/20140010516/downloads/20140010516.pdf
+
+\todo[inline]{add citations where needed}
+
+%Other approach + Filtering inherent to framework (splitting solution) + advantages
+\gls{vms} is an unconventional approach to \gls{les}. Instead of applying a low-pass spatial filter, the approach performs a finite-element projection, which splits the continuous unknown into a resolvable component and a subgrid component. This projection naturally introduces the spatial filter. The framework has several advantages over a classical \gls{les} formulation. First, the effect of modeling is confined only to the smallest resolved scales, which can reduce the effect of modeling errors. Second, with a stronger mathematical foundation, it can perform better in wall-bounded geometries.
+
+Consider a general nonlinear \gls{pde} written in residual form:
+
+\begin{equation} \label{eq:vms_residual}
+    \mathcal{R}(u) = 0
+\end{equation}
+
+where $u \in \mathcal{V}$ is the solution in a suitable function space (e.g.\ Sobolev space) and $\mathcal{R}(u)$ is the residual operator. The variational formulation reads:
+
+\noindent Find $u \in \mathcal{V}$ such that
+
+\begin{equation} \label{eq:vms_formulation}
+    (\mathcal{R}(u), w) = 0 \quad \forall w \in \mathcal{V}
+\end{equation}
+
+where $w$ are test functions and $(.,.)$ denotes an inner product over the domain. \gls{vms} decomposes the solution space into
+
+\begin{equation} \label{eq:solution_space}
+    \mathcal{V} = \bar{\mathcal{V}} \oplus \mathcal{V}'
+\end{equation}
+
+Where $\bar{\mathcal{V}}$ are the resolved (coarse) scales and $\mathcal{V}'$ are the unresolved (fine/subgrid) scales. Correspondingly,
+
+\begin{equation} \label{eq:vms_split}
+    u = \bar{u} + u' \qquad w = \bar{w} + w'
+\end{equation}
+
+Substituting this decomposition back into the weak form yields two coupled variational equations: a coarse-scale equation and a fine-scale equation. The fine-scale equation can be substituted into the coarse-scale equation, yielding the final form. Solvers must approximate the contribution from the fine-scale equation.
+
+\section{Artificial Intelligence} \label{sec:ai}
+
+\todo[inline]{add citations where needed}
+
+\gls{ai} is the simulation of human intelligence by computer systems to perform tasks like learning, reasoning, problem-solving, and decision-making, and is currently rapidly evolving due to recent breakthroughs. Applications of \gls{ai} are extensive and diverse, ranging from interpreting patterns in speech to analyzing medical X-rays to detect anomalies, etc. Using \gls{ml}, they train on vast amounts of data. \gls{ml} enables systems to automatically learn, analyze patterns, and improve from data without being explicitly programmed. This section explains \gls{ann}s plainly, as well as giving a basic overview of \gls{ml} and the \gls{mlp}.
+
+\subsection{Artificial Neural Networks} \label{subsec:ann}
+
+\todo[inline]{add citations where needed}
+
+%biologically inspired
+\gls{ann}s are humanity's best attempt at creating a digital analogy to the human brain. As the human brain is capable of performing complex tasks, such as recognizing faces in an instant, it is no wonder that humans are motivated to create models that mimic its behavior, and hopefully, its performance. Describing the human nervous system can, in essence, be done as a three-block system: receptors, effectors, and, centrally, the neural net, which is composed of neurons. Although neurons are much slower than silicon logic gates, the brain can compensate by having an enormous number of densely interconnected neurons. It is this dense interconnected neural network that inspired the mathematical models used to create \gls{ann}s.
+
+%umbrella term
+Inspired by the human brain, \gls{ann}s can be described as systems of parallel, distributed processors, each composed of simple processing units. It acquires knowledge through a learning process in which it interacts with its environment and adapts the strengths of its interneuron connections (synaptic weights). Many types of \gls{ann} models exist using this definition. \gls{ann} is thus an umbrella term encompassing various models, each with its own advantages and disadvantages.
+
+%types of models
+One of the simplest types of models is the feed-forward neural network, also called the \gls{mlp}. Other than \gls{mlp}s, well-known types of models are \gls{cnn} and \gls{rnn} models. \gls{cnn}s are used for tasks such as predicting data types, including text, images, and audio. By applying filters, they create feature maps that can detect patterns such as edges, lines, and textures. \gls{rnn}s on the other hand, use internal loops to retain memory of previous inputs. This approach makes them better suited for language translation and speech recognition. Of course, many other types of models exist, as the \gls{ai} field is currently rapidly evolving.
+
+%training sets
+As \gls{ai} models are statistical approximators, they require large amounts of data for training. Not only that, but data has to be split up into three components: the actual training set, a validation set, and a testing set. The actual training set is indeed the dataset the model uses for learning and parameter updates. Next, the validation set decides when training should halt. It does not influence the weights; instead, it evaluates the model's current performance during training. The last dataset, the test set, is used once after training is complete. It evaluates the model's true generalization performance. The model must never see this set during training or tuning.
+
+%underfitting vs overfitting
+Indeed, the goal of the model is generalization, meaning it can perform well on similar datasets not seen during training. The opposite of generalization is overfitting. When a model is overfit, it only performs well on the training dataset. The model may have learned the underlying relationship, but it may also have learned the noise in the training dataset. It has memorized the training samples instead of capturing the true structure. Causes of overfitting can include too little data or too many training epochs. Common solutions include early stopping, regularization, and dropout.
+
+\subsection{Multilayer Perceptron Models} \label{subsec:mlp}
+
+\todo[inline]{add citations where needed}
+%bischop, haykin
+
+%haykin: it is through the use of the hidden layers that a new space is created, the feature space. This space allows for classes of interest in a pattern-classification task to be more easily separated.
+
+\gls{mlp}, also known as feed-forward neural networks, are one of the simplest frameworks in the \gls{ann} landscape. They consist of three main layers: the input layer, the output layer, and the hidden layer(s) in between. Each of these layers contains an arbitrary number of neurons, and each neuron in one layer connects with every node in the following layer. Their connections are mathematically presented by
+
+\begin{equation} \label{eq:mlp_connection}
+    z = w^T x + b
+\end{equation}
+
+\begin{equation} \label{eq:mlp_activation}
+    a = \sigma(z)
+\end{equation}
+
+where $x$ is the input vector, $w$ are the weights, $b$ is a bias term, and $z$ represents the linear combination of the input, weights, and bias. $z$ is then passed on to an activation function, $\sigma$, which is typically a sigmoid, tanh, or ReLU. $a$ is the final neuron output, which becomes the input for the next layer of neurons. The input signal thus propagates forward through the model, passing each hidden layer until reaching the output layer.
+
+\begin{equation*}
+    x \rightarrow a^{(1)} \rightarrow a^{(2)} \rightarrow \ldots \rightarrow \hat{y}
+\end{equation*}
+
+During training, comparing the predicted value $\hat{y}$ to the true value $y$ provides an error signal that propagates backward through the model. During backpropagation, the error contributed to each weight is computed, providing a measure of how to adjust it. One forward-backward loop is called an epoch. After many epochs, training stops when the stopping criteria are met.
+
+As they are the simplest types of models, they will be used as the baseline model for predicting the \gls{sgs} closure terms, as explained in Chapter~\ref{ch:description}.
+
+\section{Machine Learning} \label{sec:ml}
+
+\todo[inline]{add citations where needed}
+
+\gls{ann}s are trained on huge amounts of data to approximate underlying functions, recognizing data structures, etc. These models need to be informed of the accuracy of their predictions, providing the signals required for backpropagation. There are mainly three learning paradigms: supervised learning, unsupervised learning, and reinforcement learning. Supervised learning requires a teacher to provide the models with correct target responses. On the contrary, unsupervised learning has no teacher. Instead, models train to discover and classify data structures. Lastly, reinforcement learning does not have a teacher present during learning; however, it differs from unsupervised learning in that the model still has to predict a continuous value. Reinforcement learning is thus a distinct learning philosophy, making it incorrect to classify it as supervised or unsupervised learning.
+
+\subsection{Supervised \& Unsupervised Learning} \label{subsec:supervised}
+
+\todo[inline]{add citations where needed}
+
+Supervised learning is currently the most studied machine learning paradigm, thanks to its straightforward nature. The main distinction from other paradigms is the presence of a teacher. In other words, the availability of labeled training examples. Each example consists of a unique input signal and a corresponding desired response (target). The network's parameters are adjusted to minimize the error signal between the input and the target. This learning paradigm typically applies to regression problems, where the model predicts continuous values from input data.
+
+Unsupervised learning is an approach in which a model learns patterns from unlabeled data. Typical objectives include grouping similar data, reducing dimensionality, or finding underlying features or structures. These objectives are called classification problems.
+
+\subsection{Reinforcement Learning} \label{subsec:reinforcement}
+
+\todo[inline]{add citations where needed}
+
+\gls{rl} consists of an interaction loop between an \emph{agent} and an \emph{environment}. The agent decides what actions to take, based on its current state, which it receives from the environment. The environment can be more abstract than just the outside world. For example, say an agent is a robot with a battery. Even though the battery is internal to the robot, the charge status should still be considered part of the environment by the agent and influence the agent's decisions. Besides the agent and the environment, \gls{rl} consists of four main sub-elements: a policy, a reward signal, a value function, and, optionally, a model of the environment. A policy defines the actions the agent will undertake given its current state and, roughly speaking, can be seen as a mapping from the agent's current state to its actions. A reward signal is the instantaneous goal of a learning problem. Usually, it is a scalar signal received at every step the agent takes. Agents will need to balance instantaneous rewards with long-term returns. The value function measures how beneficial it is for an agent to be in a particular state, taking into account the future rewards it can still obtain. Finally, the model of the environment describes how the environment behaves when the agent takes an action. It predicts the next state and the associated reward. Reinforcement learning splits into two methods: model-based and model-free, depending on whether a model is available. Of the two, model-free is more relevant to the problem defined in Chapter~\ref{ch:description}.
+
+% Different RL techniques
+Reinforcement learning contains several sub-methods for calculating rewards, updating policies, etc. Ranging from simpler tabular methods such as Dynamic Programming and Monte Carlo, to more complex methods, such as \gls{iql}, \gls{cql}, and TD3+BC (Behavior Cloning Regularization). For the research proposal, the latter methods are more relevant as the state spaces is tremendous, and offline off-policy learning is expected to yield the best performance while remaining computationally feasible.
+
+\subsubsection{Soft Actor-Critic}
+
+\subsubsection{Proximal Policy Optimization}
+
+\subsubsection{A3C / A2C}
+
+\subsubsection{Dreamer / Model-based RL}
+
+\subsubsection{AWAC}
+
+\subsubsection{Advanced Offline Reinforcement Learning Algorithms}
+
+\gls{iql} addresses the distribution shift problem in offline reinforcement learning by avoiding the maximization over out-of-distribution actions that appears in standard Q-learning. Instead of computing $\max_a Q(s,a)$, \gls{iql} learns a state-value function $V(s)$ directly from the dataset using \emph{expectile regression}. This allows the algorithm to estimate the value of high-quality dataset actions without explicitly evaluating unseen actions. The Q-function is then trained using the target $r + \gamma V(s')$, eliminating the need to query the Q-network for actions outside the dataset support.
+
+Policy improvement is performed using advantage-weighted behavior cloning\todo{cite this algorithm}. Actions with higher estimated advantage are imitated more strongly, while low-advantage actions are suppressed. As a result, policy improvement occurs strictly within the dataset distribution. This greatly improves training stability compared to standard actor–critic methods and avoids the need for explicit conservative penalties. \gls{iql} has been shown to perform competitively on a range of offline \gls{rl} benchmarks, particularly when datasets contain moderately good trajectories or demonstrations~\cite{Kostrikov2021}.
+
+\vspace{0.5em}
+
+Conservative Q-Learning \gls{cql} modifies the standard Q-learning objective to learn Q-values that are conservative with respect to actions not supported by the dataset. Offline \gls{rl} methods often suffer from severe overestimation of Q-values because neural networks extrapolate poorly to \gls{ood} actions. When these overestimated values are used during policy improvement, the resulting policy may exploit unrealistic actions that never occur in the dataset.
+
+\gls{cql} addresses this problem by introducing a regularization term that explicitly pushes down the Q-values of unseen actions while maintaining high Q-values for dataset actions. This effectively ensures that the expected value of a policy under the learned Q-function lower-bounds its true value. In practice, the conservative penalty reduces the likelihood that the learned policy selects actions outside the dataset support.
+
+Because of this pessimistic value estimation, \gls{cql} is particularly robust when the dataset is noisy, narrow, or partially random. Empirical results demonstrate that \gls{cql} consistently outperforms several earlier offline \gls{rl} algorithms, including Soft Actor–Critic (SAC), BEAR, BRAC\todo{cite these algorithms}, and behavior cloning baselines on a range of benchmark tasks~\cite{kumar2020}. The trade-off is that the conservative regularization increases computational cost and may introduce some degree of underestimation bias.
+
+\vspace{0.5em}
+
+\gls{td3} was originally introduced to address overestimation bias in deterministic actor–critic algorithms. The method uses clipped double Q-learning to reduce optimistic value estimates. Instead of relying on a single critic, \gls{td3} maintains two Q-functions and uses the minimum of the two when constructing the Bellman target:
+
+\begin{equation} \label{eq:td3}
+    y = r + \gamma \min_{i=1,2} Q_{\theta_i'}\big(s', \pi_{\phi'}(s')\big)
+\end{equation}
+
+Using the minimum of the critics prevents the value target from introducing additional overestimation. Although this may introduce a slight underestimation bias, such bias is generally preferable because underestimated actions are less likely to be amplified through policy updates. \gls{td3} further improves stability through the use of delayed policy updates, target networks, and target policy smoothing regularization, which reduce variance and prevent the policy from exploiting narrow peaks in the learned Q-function~\cite{Fujimoto2018}.
+
+To adapt \gls{td3} to the offline setting, Fujimoto and Gu (2021) introduced \gls{td3bc}, which augments the policy objective with a behavior cloning regularization term. The policy is trained to both maximize the Q-value and remain close to actions observed in the dataset:
+
+\begin{equation} \label{eq:td3bc}
+\pi = \arg\max_{\pi} \ \mathbb{E}_{(s,a)\sim\mathcal{D}}
+\left[
+\lambda Q(s,\pi(s)) - \|\pi(s) - a\|^2
+\right]
+\end{equation}
+
+The hyperparameter $\lambda$ controls the strength of the behavior cloning constraint. This simple modification significantly improves stability in offline settings by preventing the policy from deviating too far from the dataset distribution. Despite its simplicity, \gls{td3bc} performs competitively with more complex offline \gls{rl} algorithms on several benchmark tasks while being substantially easier to implement and computationally cheaper~\cite{Fujimoto2021}.
+
+\begin{table}[h]
+    \centering
+    \caption{Comparison of CQL, IQL, and TD3+BC for offline reinforcement learning.}
+    \label{tab:rl_overview}
+    \begin{tabular}{l c c c}
+        \bluetoprule
+        \textbf{Property} & \textbf{CQL} & \textbf{IQL} & \textbf{TD3+BC} \\
+        \blueheadrule
+        Handles poor datasets & $\star\star\star$ & $\star\star$ & $\star$ \\
+        Training stability & $\star\star$ & $\star\star\star$ & $\star\star$ \\
+        Computational cost & High & Medium & Low \\
+        Implementation complexity & Medium & Medium & Very Low \\
+        Policy improvement ability & Medium & Medium & High \\
+        Extrapolation robustness & $\star\star\star$ & $\star\star$ & $\star$ \\
+        \bluebottomrule
+    \end{tabular}
+\end{table}
+
+\section{CFD-ANN Enriched Models} \label{sec:cfd_nn}
+
+\subsection{Other work} \label{subsec:other_work}
+
+\subsection{Past Work at TU Delft} \label{subsec:past_work}
+
+The problem of solver stability has been persistent. Although multiple authors have contributed to the stability issue, the problem of long-term instability remains. In this section, the previous work of the authors at the TU Delft is explained, laying the groundwork for future progress and identifying the core issues that cause instability.
+
+The first to try coupling a \gls{mlp} with a \gls{les} solver to learn the unresolved-scale closure terms within a \gls{vms} formulation was Robijns~\cite{Robijns2019}. He attempted an unconstrained approach, tasking a \gls{ann} with representing the complete unresolved-scale model. In contrast, a constrained approach has been attempted prior to Robijns (Durieux, Beekman, Kurian). Of course, hybrid models are also conceivable. The unconstrained approach will remain the basis for future work. Using the one-dimensional Burgers equation as a substitute for the Navier-Stokes equations, Robijns demonstrated that neural networks are capable of learning the underlying physical phenomena, and achieved strong \emph{a priori} correlations between \gls{ann} predictions and \gls{dns} projected closures. However, he performed no rigorous \emph{a posteriori}, which led to subsequent work by the other authors.
+
+Inserting the \gls{ann} predicted closures into an \emph{online} simulation revealed severe stability issues. Janssens~\cite{Janssens2019} set out to investigate the sources responsible for this critical stability problem. He identified two fundamental instability mechanisms: \gls{cpi}, caused by \gls{ann}-induced spurious roots in the Newton loop, and \gls{lti}, caused by error accumulation. Janssens essentially shifted the research focus from ``can a neural network learn the underlying physics?'' to ``can it remain stable in an online setting?''. From this point on, it was clear that strong \emph{a priori} correlations do not translate directly to \emph{a posteriori} performance.
+
+\todo{find more sources for noise-added machine learning training}
+
+A tactic to increase robustness and stability, and reduce overfitting, of an \gls{ann} is to inject the training data with artificial noise. For the \gls{vms}-\gls{ann} coupled problem, the idea was to train the neural network on ``perfect'' projected \gls{dns} data. This training method prevented the model from ever encountering erroneous data, leaving it unprepared for situations where the input data contains self-induced errors. Pusuluri~\cite{Pusuluri2020} attempted this approach and found that injecting the training data with Gaussian noise indeed improved robustness and reduced sensitivity to off-manifold states encountered during online simulations. However, this came at a cost of model accuracy, and ultimately, the fundamental problem of \gls{lti} persisted.
+
+Next, Rajampeta~\cite{Rajampeta2021} focused on fixing the \gls{cpi} problem. He introduced the \gls{lfs} strategy to decouple the \gls{ann} prediction from the corrector loop. This approach addressed the \gls{cpi} problem, but \gls{lti} remained, for which he introduced backscatter limiting to prevent destabilizing energy transfer from the fine to the coarse scales. Limiting enabled stable simulations but reduced physical fidelity, as backscatter is inherent.
+
+Bettini~\cite{Bettini2023} was the first to attempt the \gls{ann}-\gls{vms} formulation to a three-dimensional turbulent channel flow. His idea for addressing the \gls{lti}s was to introduce an energy-constrained training formulation. Again, Bettini achieved strong \emph{a priori} correlations, but \emph{a posteriori} simulations showed excessive dissipation and persistent stability issues. Indeed, energy-consistent training alone is not sufficient to guarantee physically correct long-term behavior.
+
+Krochak~\cite{Krochak2024} intended to redefine the 3D formulation, focusing on stability, solver consistency, and computational practicality. By reformulating the closure definitions, he demonstrated that modeling the continuity closure terms is particularly problematic. He evaluated three stabilization strategies: filtering of the \gls{ann} target, mini-batch sum loss, and rotational data augmentation. These improved robustness, but again, the problem of long-term instability remained.
+
+\todo{Include Dominik in timeline}
+
+\begin{table}[h]
+    \centering
+    \caption{Overview of past TU Delft work.}
+    \label{tab:past_overview}
+    \begin{tabular}{H l l l}
+        \bluetoprule
+        Author & Year & Problem & Approach \\
+        \blueheadrule
+        Robijns   & 2019 & 1D Burgers & VMM-\gls{ann} coupling feasibility                  \\
+        Janssens  & 2019 & 1D Burgers & \emph{Online} analysis \\
+        Pusuluri  & 2020 & 1D Burgers & Noise-augmented training \\
+        Rajampeta & 2021 & 1D Burgers & \gls{lfs} \& limiting \\
+        Bettini   & 2023 & TCF $Re_{180}$ & Energy-constrained \\
+        Krochak   & 2024 & TCF & Filtering, mini-batch loss, rotational augmentation \\
+        Dominik & & &  \\
+        \bluebottomrule
+    \end{tabular}
+\end{table}

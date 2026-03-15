@@ -1,0 +1,142 @@
+\chapter{MLP Extensive Explanation} \label{ch:appendix_mlp}
+
+This connection is mathematically presented by the sum of previous neurons multiplied by a specific weight, plus an additional bias term. Thus, for neuron $j$ in the layer $l + 1$: \todo{change l to $\lambda$ maybe, change $N_L$ to $L$, and check what $\|$ means mathematically.}
+
+\begin{equation}~\label{eq:mlp1}
+    z_j^{l+1} = \sum_{i=1}^{N_l} w_{ij}^{(l)} a_i^{(l)} + b_j^{(l)}
+\end{equation}
+
+Where $N_L$ is the total amount of layers, parameters $w_{ij}^{(l)}$ are weights, parameters $b_i^{(l)}$ are biases, and $a_i^{(l)}$ is the output of neuron $i$ in the previous layer. Afterward, a non-linear activation function is applied to the sum:
+
+\begin{equation}~\label{eq:mlp2}
+    a_i^{(l+1)} = \sigma ( z_j^{l+1} )
+\end{equation}
+
+Typically, this activation function $\sigma (\cdot)$ is generally chosen to be a sigmoidal function such as the logistic sigmoid or simply the hyperbolic tangent function.
+
+\begin{equation}~\label{eq:mlp3}
+    \sigma (z_j) = \tanh (z_j) \quad \| \quad
+    \sigma(z_j) = (1 + \exp{(-a)})^{-1}  \quad \| \quad
+    \sigma(z_j) = \ldots
+\end{equation}
+
+To best understand the overall model architecture, it is better to collect the neurons, weights, and biases into their respective matrices $\textbf{a}^(l)$, $\textbf{W}^(l)$ and $\textbf{b}^(l)$. For a single layer-to-layer connection, equation~\ref{eq:mlp1} is transformed into
+
+\begin{equation}~\label{eq:mlp4}
+    \textbf{a}^(l+1) = \sigma \left( \textbf{W}^(l) \textbf{a}^(l) + \textbf{b}^(l)  \right), \quad l = 0, \ldots, N_L - 1
+\end{equation}
+
+\todo{Check GPT content below}
+\subsubsection{Two-Layer Multilayer Perceptron Architecture}
+
+An \gls{ml}P can have an arbitrary amount of hidden layers. For simplicity, however, the explanation will continue using a two-layer (one hidden layer) \gls{ml}P\@.
+Starting from the layer-wise definition in Eq.~\eqref{eq:mlp4} the input to the network is given by
+
+\begin{equation}~\label{eq:mlp5}
+\mathbf{a}^{(0)} = \mathbf{x} \in \mathbb{R}^{n_0},
+\end{equation}
+
+where $\mathbf{x}$ denotes the input feature vector.
+The hidden layer performs an affine transformation followed by a nonlinear activation function,
+
+\begin{equation}
+\label{eq:mlp_hidden}
+\mathbf{a}^{(1)} =
+\sigma^{(1)}\!\left(
+\mathbf{W}^{(0)} \mathbf{x} + \mathbf{b}^{(0)}
+\right),
+\end{equation}
+
+with weight matrix $\mathbf{W}^{(0)} \in \mathbb{R}^{n_1 \times n_0}$ and bias vector $\mathbf{b}^{(0)} \in \mathbb{R}^{n_1}$. The activation function $\sigma^{(1)}(\cdot)$ is applied element-wise and introduces nonlinearity into the model.
+
+The output layer maps the hidden-layer activations to the final network output,
+
+\begin{equation}
+\label{eq:mlp_output}
+\mathbf{a}^{(2)} =
+\sigma^{(2)}\!\left(
+\mathbf{W}^{(1)} \mathbf{a}^{(1)} + \mathbf{b}^{(1)}
+\right),
+\end{equation}
+
+where $\mathbf{W}^{(1)} \in \mathbb{R}^{n_2 \times n_1}$ and $\mathbf{b}^{(1)} \in \mathbb{R}^{n_2}$. The activation function $\sigma^{(2)}(\cdot)$ is chosen according to the learning task, e.g.\ the identity function for regression or a sigmoid/softmax function for classification.
+
+Combining Eqs.~\eqref{eq:mlp_hidden} and \eqref{eq:mlp_output}, the two-layer \gls{ml}P defines the input–output mapping
+\begin{equation}
+\label{eq:mlp_2layer_full}
+f(\mathbf{x}) =
+\sigma^{(2)}\!\Big(
+\mathbf{W}^{(1)}
+\sigma^{(1)}\!\left(
+\mathbf{W}^{(0)} \mathbf{x} + \mathbf{b}^{(0)}
+\right)
++ \mathbf{b}^{(1)}
+\Big).
+\end{equation}
+
+The complete set of trainable parameters of the model is given by
+\begin{equation}~\label{eq:mlp_total}
+\Theta =
+\left\{
+\mathbf{W}^{(0)}, \mathbf{b}^{(0)},
+\mathbf{W}^{(1)}, \mathbf{b}^{(1)}
+\right\}.
+\end{equation}
+
+This formulation highlights that even a single hidden layer, when combined with a nonlinear activation function, yields a nonlinear mapping capable of approximating complex input–output relationships.
+
+\subsubsection{Training an MLP Model}
+%backpropagation
+
+Setting the parameters of the \gls{mlp} model can not simply be initially chosen to yield the best performance. Instead, these parameters need to be trained. For this, the concept of \emph{Backpropagation} is used. This is a process where the output of the model is compared to the target vector $\mathbf{t}$. Afterward, starting from the output layer, the weights and biases are adjusted in a backwards propagating manner up until the first hidden layer, hence the name \emph{backpropagation}.
+These parameters,
+\[
+\Theta =
+\left\{
+\mathbf{W}^{(0)}, \mathbf{b}^{(0)},
+\mathbf{W}^{(1)}, \mathbf{b}^{(1)}
+\right\},
+\]
+are initialized using random noise. \todo{cite why random noise?} Then, they are trained by minimizing a loss function that measures the discrepancy between the network prediction and the target output.
+
+Let $\mathbf{y}$ denote the target output corresponding to the input $\mathbf{x}$, and let the network prediction be
+\[
+\hat{\mathbf{y}} = f(\mathbf{x}) = \mathbf{a}^{(2)}.
+\]
+The training objective is defined as
+\begin{equation}
+\label{eq:loss}
+\mathcal{L} = \ell(\hat{\mathbf{y}}, \mathbf{y}),
+\end{equation}
+where $\ell(\cdot,\cdot)$ is a suitable loss function, e.g.\ the mean-squared error for regression or the cross-entropy loss for classification. As the regression problem is more relevant to this project, the mean-squared error (MSE) will be the standard loss function.
+
+\begin{equation}~\label{eq:mlp_mean_squared}
+    \mathcal{L}_r = \frac{1}{2} \sum_{k = 1}^{K} (y_k - t_k)^2
+\end{equation}
+where $t_k$ \ldots
+
+Now, the process of backpropagation begins by differentiating the loss function w.r.t.\ the network output. For the MSE loss, this is simply
+
+\begin{equation}~\label{eq:mlp_loss_derivative}
+    \frac{\partial \mathcal{L}_r}{\partial y_k} = y_k - t_k = \delta_k
+\end{equation}
+
+This quantity represents the prediction error at the output layer. As the output of the network naturally depends on the parameters of the output layer, the output error can be translated into sensitivities of the loss w.r.t.\ the output-layer weights and biases through the use of the chain rule. Essentially, it is asking how the output layer parameters should change in order to reduce the output error. The key idea of backpropagation is that this error can be propagated backward to earlier layers of the model. Each hidden neuron contributes to the overall loss, and it can be obtained by:
+
+\begin{itemize}
+    \item weighting the output error by the connecting weights,
+    \item accounting for local sensitivity of the activation function.
+\end{itemize}
+
+Through the use of the chain rule, the errors for the first hidden layer can be defined by \todo{There are some steps inbetween the first part of the equation and the last, maybe explain these later?}
+
+still to explain briefly
+\begin{itemize}
+    \item go from errors to gradients wrt to weights and biases
+    \item from gradients, parameters are updated using a gradient-based optimization method (such as gradient descent) each parameter is updated to reduce the loss, scaled by a learning rate that controls the step size of the update
+    \item as and end note, this process is repeated iteratively, refining the model each epoch.
+\end{itemize}
+
+\begin{equation}~\label{eq:mlp_hidden_backwards}
+    \delta_j \equiv \frac{\partial \mathcal{L}_r}{\partial a_j} = (1 - z_j^2) \sum_{k=1}^K w_{kj} \delta_k
+\end{equation}
