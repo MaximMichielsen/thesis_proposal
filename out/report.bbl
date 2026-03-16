@@ -132,6 +132,90 @@
       \verb http://arxiv.org/abs/1802.09477
       \endverb
     \endentry
+    \entry{haarnoja2019}{misc}{}{}
+      \name{author}{11}{}{%
+        {{hash=45b14f55dd7ae28cb6cb2e23e4a168b9}{%
+           family={Haarnoja},
+           familyi={H\bibinitperiod},
+           given={Tuomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=519033a7338e5ef684c77d4d04748a4a}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Aurick},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2bf28b92c31c717feee2c15487657b25}{%
+           family={Hartikainen},
+           familyi={H\bibinitperiod},
+           given={Kristian},
+           giveni={K\bibinitperiod}}}%
+        {{hash=641a3f5d5ce834c4b56fb672c5df0207}{%
+           family={Tucker},
+           familyi={T\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d235634814ed266793a4de24b71955e6}{%
+           family={Ha},
+           familyi={H\bibinitperiod},
+           given={Sehoon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=aaa7cb90b2e1cc2079b5e8a087a903c9}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bbba0ccb50436105a4134d24509b62d7}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vikash},
+           giveni={V\bibinitperiod}}}%
+        {{hash=fde29d8aa12ec2aa9ab89c495df350fb}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d0792eb04b685020eafedbc871aeb84f}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Abhishek},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e28d4ee199593959d8c29980a64f1974}{%
+           family={Abbeel},
+           familyi={A\bibinitperiod},
+           given={Pieter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c9545da54b33744da25943cdf66eadac}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b8c131de85c5000ff50df59a4d062227}
+      \strng{fullhash}{c6ac1e78375b5b1cb1c472544f2557df}
+      \strng{fullhashraw}{c6ac1e78375b5b1cb1c472544f2557df}
+      \strng{bibnamehash}{b8c131de85c5000ff50df59a4d062227}
+      \strng{authorbibnamehash}{b8c131de85c5000ff50df59a4d062227}
+      \strng{authornamehash}{b8c131de85c5000ff50df59a4d062227}
+      \strng{authorfullhash}{c6ac1e78375b5b1cb1c472544f2557df}
+      \strng{authorfullhashraw}{c6ac1e78375b5b1cb1c472544f2557df}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Soft Actor-Critic Algorithms and Applications}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1812.05905
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1812.05905
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1812.05905
+      \endverb
+    \endentry
     \entry{Janssens2019}{report}{}{}
       \name{author}{1}{}{%
         {{hash=536607e2e377337d1c46db6ccd15ead1}{%
@@ -373,6 +457,60 @@
       \field{title}{A Machine Learning Approach to Unresolved-Scale Modeling for Burgers' Equation}
       \field{type}{techreport}
       \field{year}{2019}
+    \endentry
+    \entry{schulman2017}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=3e09bd2a25d237ebdaed560a07c0451e}{%
+           family={Schulman},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=674ede0b9cd02a2bf5fc662972efb9f0}{%
+           family={Wolski},
+           familyi={W\bibinitperiod},
+           given={Filip},
+           giveni={F\bibinitperiod}}}%
+        {{hash=4164e43d8cf919f5e3f8d80f5ea23f36}{%
+           family={Dhariwal},
+           familyi={D\bibinitperiod},
+           given={Prafulla},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a812c46caad94fc8701be37871f303ba}{%
+           family={Radford},
+           familyi={R\bibinitperiod},
+           given={Alec},
+           giveni={A\bibinitperiod}}}%
+        {{hash=be38507da6ab98e7ac01ac2c6b7e13eb}{%
+           family={Klimov},
+           familyi={K\bibinitperiod},
+           given={Oleg},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{fullhash}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{fullhashraw}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{bibnamehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{authorbibnamehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{authornamehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{authorfullhash}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{authorfullhashraw}{a6c6ed5a5aeb74e536f16291276ae392}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Proximal Policy Optimization Algorithms}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1707.06347
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1707.06347
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1707.06347
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

@@ -129,19 +129,109 @@ Unsupervised learning is an approach in which a model learns patterns from unlab
 \gls{rl} consists of an interaction loop between an \emph{agent} and an \emph{environment}. The agent decides what actions to take, based on its current state, which it receives from the environment. The environment can be more abstract than just the outside world. For example, say an agent is a robot with a battery. Even though the battery is internal to the robot, the charge status should still be considered part of the environment by the agent and influence the agent's decisions. Besides the agent and the environment, \gls{rl} consists of four main sub-elements: a policy, a reward signal, a value function, and, optionally, a model of the environment. A policy defines the actions the agent will undertake given its current state and, roughly speaking, can be seen as a mapping from the agent's current state to its actions. A reward signal is the instantaneous goal of a learning problem. Usually, it is a scalar signal received at every step the agent takes. Agents will need to balance instantaneous rewards with long-term returns. The value function measures how beneficial it is for an agent to be in a particular state, taking into account the future rewards it can still obtain. Finally, the model of the environment describes how the environment behaves when the agent takes an action. It predicts the next state and the associated reward. Reinforcement learning splits into two methods: model-based and model-free, depending on whether a model is available. Of the two, model-free is more relevant to the problem defined in Chapter~\ref{ch:description}.
 
 % Different RL techniques
-Reinforcement learning contains several sub-methods for calculating rewards, updating policies, etc. Ranging from simpler tabular methods such as Dynamic Programming and Monte Carlo, to more complex methods, such as \gls{iql}, \gls{cql}, and TD3+BC (Behavior Cloning Regularization). For the research proposal, the latter methods are more relevant as the state spaces is tremendous, and offline off-policy learning is expected to yield the best performance while remaining computationally feasible.
+Reinforcement learning contains several sub-methods for calculating rewards, updating policies, etc. Ranging from simpler tabular methods to more complex methods for continuous domain problems. For the research proposal, the latter methods are more relevant as the state spaces is tremendous, and offline off-policy learning is expected to yield the best performance while remaining computationally feasible.
 
-\subsubsection{Soft Actor-Critic}
+\todo[inline]{Rewrite the gpt stuf!}
 
-\subsubsection{Proximal Policy Optimization}
+\subsubsection{Online Algorithms}
 
-\subsubsection{A3C / A2C}
+% soft actor critic
+\gls{sac} is an off-policy actor–critic reinforcement learning algorithm based on the maximum entropy reinforcement learning framework. Instead of maximizing only the expected return, \gls{sac} optimizes a stochastic policy that maximizes both the expected reward and the entropy of the policy. The objective can be written as
 
-\subsubsection{Dreamer / Model-based RL}
+\begin{equation} \label{eq:sac_objective}
+J(\pi) = \mathbb{E}_{(s_t,a_t)\sim\rho_\pi}
+\left[
+\sum_t r(s_t,a_t) + \alpha H(\pi(\cdot|s_t))
+\right]
+\end{equation}
 
-\subsubsection{AWAC}
+where $H(\pi(\cdot|s))$ denotes the entropy of the policy and $\alpha$ is the temperature parameter that controls the trade-off between reward maximization and exploration. The entropy term encourages the policy to remain stochastic, which improves exploration and robustness during learning~\cite{haarnoja2019}.
 
-\subsubsection{Advanced Offline Reinforcement Learning Algorithms}
+\gls{sac} follows an actor–critic architecture with a stochastic policy (the actor) and two Q-functions (the critics). The Q-functions are trained using a modified Bellman update that incorporates the entropy term:
+
+\begin{equation} \label{eq:sac_q}
+Q(s,a) = r(s,a) + \gamma \mathbb{E}_{s'} 
+\left[
+Q(s',a') - \alpha \log \pi(a'|s')
+\right]
+\end{equation}
+
+where $a' \sim \pi(\cdot|s')$. Similar to \gls{td3}, \gls{sac} employs two Q-functions and uses the minimum of the two value estimates to reduce overestimation bias during policy improvement.
+
+The policy is updated by minimizing the objective
+
+\begin{equation} \label{eq:sac_objective2}
+J_\pi(\phi) =
+\mathbb{E}_{s\sim D, a\sim \pi_\phi}
+\left[
+\alpha \log \pi_\phi(a|s) - Q_\theta(s,a)
+\right]
+\end{equation}
+
+which encourages the policy to select actions that both maximize the expected Q-value and maintain sufficient entropy. In practice, \gls{sac} also introduces an automatic temperature tuning mechanism that adjusts $\alpha$ during training to maintain a desired entropy level, which significantly improves stability and reduces the need for manual hyperparameter tuning.
+
+Empirically, \gls{sac} has been shown to outperform both on-policy methods such as \gls{ppo} and earlier off-policy actor–critic algorithms such as DDPG and \gls{td3} on a range of continuous control benchmarks, achieving both improved sample efficiency and higher asymptotic performance~\cite{haarnoja2019}. However, \gls{sac} is primarily designed for online reinforcement learning settings in which the agent can interact with the environment during training. In purely offline reinforcement learning settings, the entropy-driven policy improvement can lead to significant extrapolation errors when the policy evaluates actions outside the dataset distribution. Consequently, algorithms specifically designed for offline learning, such as \gls{cql} or \gls{iql}, are generally preferred when training from fixed datasets.
+
+%proximal policy optimization
+\gls{ppo} is an on-policy actor–critic reinforcement learning algorithm designed to achieve stable policy updates while maintaining implementation simplicity. \gls{ppo} belongs to the family of policy gradient methods, which optimize a parameterized stochastic policy by estimating gradients of expected return with respect to policy parameters.
+
+The basic policy gradient estimator is given by
+
+\begin{equation}
+\hat{g} =
+\mathbb{E}_t
+\left[
+\nabla_\theta \log \pi_\theta(a_t|s_t)\hat{A}_t
+\right]
+\end{equation}
+
+where $\pi_\theta(a|s)$ is the policy and $\hat{A}_t$ is an estimator of the advantage function~\cite{schulman2017}. This formulation encourages the policy to increase the probability of actions that yield positive advantages and decrease the probability of actions with negative advantages. :contentReference[oaicite:0]{index=0}
+
+However, performing multiple gradient updates on the same data can lead to excessively large policy updates, resulting in unstable learning. Earlier algorithms such as Trust Region Policy Optimization (TRPO) addressed this by constraining the \gls{kl} divergence between successive policies, but solving this constrained optimization problem is computationally expensive.
+
+\gls{ppo} simplifies this approach by introducing a clipped surrogate objective that restricts how far the updated policy can deviate from the previous policy. Defining the probability ratio
+
+\begin{equation}
+r_t(\theta) =
+\frac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{\text{old}}}(a_t|s_t)},
+\end{equation}
+
+the \gls{ppo} objective is defined as
+
+\begin{equation}
+L^{\text{CLIP}}(\theta) =
+\mathbb{E}_t
+\left[
+\min
+\left(
+r_t(\theta)\hat{A}_t,
+\text{clip}(r_t(\theta), 1-\epsilon, 1+\epsilon)\hat{A}_t
+\right)
+\right]
+\end{equation}
+
+where $\epsilon$ is a small hyperparameter (typically around $0.2$). The clipping operation prevents the probability ratio from moving too far away from 1, effectively limiting the size of policy updates while still allowing efficient gradient-based optimization. :contentReference[oaicite:1]{index=1}
+
+\gls{ppo} typically uses an actor–critic architecture in which the policy network (actor) outputs a stochastic action distribution and a value network (critic) estimates the state value $V(s)$. The full objective function combines the clipped policy loss with a value function loss and an entropy bonus to encourage exploration:
+
+\begin{equation}
+L(\theta) =
+\mathbb{E}_t
+\left[
+L^{\text{CLIP}}_t(\theta)
+- c_1 L^{VF}_t(\theta)
++ c_2 S[\pi_\theta](s_t)
+\right]
+\end{equation}
+
+where $L^{VF}$ is the value function regression loss and $S[\pi]$ denotes the entropy of the policy distribution.
+
+Training proceeds iteratively by collecting trajectories using the current policy, estimating advantages, and then performing several epochs of minibatch stochastic gradient ascent on the surrogate objective before collecting new data. This allows \gls{ppo} to reuse sampled data efficiently while maintaining stable policy improvement. :contentReference[oaicite:2]{index=2}
+
+Empirically, \gls{ppo} achieves performance comparable to or better than TRPO while being significantly easier to implement and more computationally efficient. It has become one of the most widely used reinforcement learning algorithms for continuous control and large-scale policy learning problems. :contentReference[oaicite:3]{index=3}
+% a3c a2c
+
+\subsubsection{Offline Algorithms}
 
 \gls{iql} addresses the distribution shift problem in offline reinforcement learning by avoiding the maximization over out-of-distribution actions that appears in standard Q-learning. Instead of computing $\max_a Q(s,a)$, \gls{iql} learns a state-value function $V(s)$ directly from the dataset using \emph{expectile regression}. This allows the algorithm to estimate the value of high-quality dataset actions without explicitly evaluating unseen actions. The Q-function is then trained using the target $r + \gamma V(s')$, eliminating the need to query the Q-network for actions outside the dataset support.
 
@@ -149,7 +239,7 @@ Policy improvement is performed using advantage-weighted behavior cloning\todo{c
 
 \vspace{0.5em}
 
-Conservative Q-Learning \gls{cql} modifies the standard Q-learning objective to learn Q-values that are conservative with respect to actions not supported by the dataset. Offline \gls{rl} methods often suffer from severe overestimation of Q-values because neural networks extrapolate poorly to \gls{ood} actions. When these overestimated values are used during policy improvement, the resulting policy may exploit unrealistic actions that never occur in the dataset.
+\gls{cql} modifies the standard Q-learning objective to learn Q-values that are conservative with respect to actions not supported by the dataset. Offline \gls{rl} methods often suffer from severe overestimation of Q-values because neural networks extrapolate poorly to \gls{ood} actions. When these overestimated values are used during policy improvement, the resulting policy may exploit unrealistic actions that never occur in the dataset.
 
 \gls{cql} addresses this problem by introducing a regularization term that explicitly pushes down the Q-values of unseen actions while maintaining high Q-values for dataset actions. This effectively ensures that the expected value of a policy under the learned Q-function lower-bounds its true value. In practice, the conservative penalty reduces the likelihood that the learned policy selects actions outside the dataset support.
 
