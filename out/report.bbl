@@ -368,6 +368,75 @@
       \verb https://arxiv.org/abs/2006.04779
       \endverb
     \endentry
+    \entry{mnih2016}{misc}{}{}
+      \name{author}{8}{}{%
+        {{hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{%
+           family={Mnih},
+           familyi={M\bibinitperiod},
+           given={Volodymyr},
+           giveni={V\bibinitperiod}}}%
+        {{hash=db6afdf70ea61bf8ed973a75b90ff818}{%
+           family={Badia},
+           familyi={B\bibinitperiod},
+           given={Adrià\bibnamedelima Puigdomènech},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=9e80f4779b032f68a6106e1424345450}{%
+           family={Mirza},
+           familyi={M\bibinitperiod},
+           given={Mehdi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=dfca94b0427da7f9088af596e23b46c0}{%
+           family={Graves},
+           familyi={G\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2a321a868e44d49baf52b5e2d816fb71}{%
+           family={Lillicrap},
+           familyi={L\bibinitperiod},
+           given={Timothy\bibnamedelima P.},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=b63b9b2d91f6ba1b1739563edc0432ab}{%
+           family={Harley},
+           familyi={H\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=89dbd30410c2085cd059f32c57d4593e}{%
+           family={Silver},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=481308b301166b521c74fde6566e97e6}{%
+           family={Kavukcuoglu},
+           familyi={K\bibinitperiod},
+           given={Koray},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{fullhash}{e067addbfefbaf06a859610fa608b21e}
+      \strng{fullhashraw}{e067addbfefbaf06a859610fa608b21e}
+      \strng{bibnamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authorbibnamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authornamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authorfullhash}{e067addbfefbaf06a859610fa608b21e}
+      \strng{authorfullhashraw}{e067addbfefbaf06a859610fa608b21e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Asynchronous Methods for Deep Reinforcement Learning}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1602.01783
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1602.01783
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1602.01783
+      \endverb
+    \endentry
     \entry{Pusuluri2020}{report}{}{}
       \name{author}{1}{}{%
         {{hash=a84f0292efd7277b3029109d0ff133f6}{%

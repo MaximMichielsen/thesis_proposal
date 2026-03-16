@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.1.13)  16 MAR 2026 10:36
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.1.13)  16 MAR 2026 11:44
  restricted system commands enabled.
  file:line:error style messages enabled.
 **report.tex
@@ -1906,7 +1906,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
 ]
 
 Package glossaries Info: Preparing to sort glossary `acronym' (total number of
-(glossaries)             referenced entries: 30)
+(glossaries)             referenced entries: 32)
 
 [2
 
@@ -1931,46 +1931,82 @@ Overfull \hbox (1.16975pt too wide) in paragraph at lines 63--64
 , and decision-making, and is cur-rently rapidly
  []
 
-[6] [7] [8] [9] [10] [11]
-Overfull \hbox (2.56912pt too wide) in paragraph at lines 229--231
+[6] [7] [8]
+
+./mainmatter/literature.tex:138: Package glossaries Error: Glossary entry `a3c'
+ has not been defined.
+
+See the glossaries package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.138 ...h as \gls{ppo}, \gls{sac}, and \gls{a3c} 
+                                                  fall into this category an...
+You need to define a glossary entry before you can use it.
+
+[9] [10] [11]
+Overfull \hbox (2.56912pt too wide) in paragraph at lines 239--240
 \TU/Cambria(0)/m/n/10.95 widely used re-in-force-ment learn-ing al-go-rithms for
  con-tin-u-ous con-trol and large-scale pol-icy learn-
  []
 
-[12] [13] [14]) (./mainmatter/research_plan.tex [15]
+[12]
+Overfull \hbox (10.53146pt too wide) in paragraph at lines 272--284
+ [][] 
+ []
+
+[13] [14] [15]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./mainmatter/research_plan.tex [16] [17]
 Chapter 4.
-[16
+[18
 
-] [17]) [18] (./appendix/mlp.tex [19
+] [19]) [20] (./appendix/mlp.tex [21
 
-]
+] [22]
 Appendix A.
-[20
+[23
 
-] [21] [22]) [23]
+] [24] [25]) [26]
 (C:/Users/poopy/PycharmProjects/thesis_proposal/out/report.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
  ***********
-Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 28567EFBA6EBC3C9232BCA5832A6CD2E;3106.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `report.out':
+(rerunfilecheck)             Before: F01A632CB020DA18F220C0FA8C3AE70B;3106
+(rerunfilecheck)             After:  28567EFBA6EBC3C9232BCA5832A6CD2E;3106.
 Package logreq Info: Writing requests to 'report.run.xml'.
 
 \openout1 = report.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 52416 strings out of 476081
+ 52503 strings out of 476081
  100000,2373549 words of node,token memory allocated
- 23193 words of node memory still in use:
-   428 hlist, 41 vlist, 2 rule, 42 disc, 26 local_par, 6 math, 640 glue, 53 kern
-, 54 penalty, 538 glyph, 1509 attribute, 122 glue_spec, 1509 attribute_list, 28 
-write, 26 save_pos, 871 pdf_literal, 5 pdf_action, 26 pdf_colorstack nodes
-   avail lists: 1:2,2:915,3:592,4:257,5:688,6:55,7:7121,8:60,9:542,10:18,11:640
- 73695 multiletter control sequences out of 65536+600000
+ 20375 words of node memory still in use:
+   370 hlist, 35 vlist, 2 rule, 38 disc, 22 local_par, 6 math, 560 glue, 51 kern
+, 48 penalty, 498 glyph, 1293 attribute, 122 glue_spec, 1293 attribute_list, 24 
+write, 22 save_pos, 737 pdf_literal, 5 pdf_action, 22 pdf_colorstack nodes
+   avail lists: 1:2,2:915,3:641,4:261,5:631,6:55,7:6940,8:60,9:542,10:18,11:651
+ 73774 multiletter control sequences out of 65536+600000
  90 fonts using 28016983 bytes
- 99i,12n,105p,2541b,1352s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,105p,2541b,1362s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+warning  (pdf backend): unreferenced destination with name 'table.caption.17'
+
+warning  (pdf backend): unreferenced destination with name 'chapter*.24'
 <c:/users/poopy/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono10-
 regular.otf><./fonts/cambria/CAMBRIAZ.TTF><./fonts/cambria/CAMBRIAI.TTF><./fonts
 /cambria/CAMBRIAB.TTF><./fonts/cambria/CAMBRIA.TTC><C:/Users/poopy/AppData/Local
@@ -1989,9 +2025,9 @@ ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/poop
 y/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Use
 rs/poopy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb>
-Output written on report.pdf (28 pages, 1875227 bytes).
+Output written on report.pdf (31 pages, 1886105 bytes).
 
-PDF statistics: 511 PDF objects out of 1000 (max. 8388607)
- 150 named destinations out of 1000 (max. 1048576)
+PDF statistics: 537 PDF objects out of 1000 (max. 8388607)
+ 158 named destinations out of 1000 (max. 1048576)
  176 words of extra memory for PDF output out of 10000 (max. 100000000)
 

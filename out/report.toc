@@ -10,17 +10,18 @@
 \contentsline {section}{\numberline {3.3}Machine Learning}{8}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Supervised \& Unsupervised Learning}{8}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Reinforcement Learning}{9}{subsection.3.3.2}%
-\contentsline {subsubsection}{Online Algorithms}{9}{section*.13}%
-\contentsline {subsubsection}{Offline Algorithms}{12}{equation.3.13}%
-\contentsline {section}{\numberline {3.4}CFD-ANN Enriched Models}{13}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Other work}{13}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Past Work at TU Delft}{14}{subsection.3.4.2}%
-\contentsline {chapter}{\numberline {4}Research Plan}{16}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Proposal}{16}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Project Plan}{17}{section.4.2}%
+\contentsline {paragraph}{Online vs.\ Offline Reinforcement Learning}{9}{section*.14}%
+\contentsline {subsubsection}{Online Algorithms}{10}{section*.14}%
+\contentsline {subsubsection}{Offline Algorithms}{13}{table.caption.15}%
+\contentsline {section}{\numberline {3.4}CFD-ANN Enriched Models}{15}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Other work}{15}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Past Work at TU Delft}{15}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {4}Research Plan}{18}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Proposal}{18}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Project Plan}{19}{section.4.2}%
 \addvspace {0.8\baselineskip }
-\contentsline {chapter}{References}{19}{chapter*.23}%
-\contentsline {chapter}{\numberline {A}MLP Extensive Explanation}{20}{appendix.A}%
-\contentsline {subsubsection}{Two-Layer Multilayer Perceptron Architecture}{21}{section*.25}%
-\contentsline {subsubsection}{Training an MLP Model}{21}{equation.A.9}%
+\contentsline {chapter}{References}{21}{chapter*.23}%
+\contentsline {chapter}{\numberline {A}MLP Extensive Explanation}{23}{appendix.A}%
+\contentsline {subsubsection}{Two-Layer Multilayer Perceptron Architecture}{24}{section*.25}%
+\contentsline {subsubsection}{Training an MLP Model}{24}{equation.A.9}%
 \contentsfinish 
