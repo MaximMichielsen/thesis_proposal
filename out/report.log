@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.1.13)  16 MAR 2026 11:44
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.1.13)  16 MAR 2026 12:01
  restricted system commands enabled.
  file:line:error style messages enabled.
 **report.tex
@@ -1933,6 +1933,12 @@ Overfull \hbox (1.16975pt too wide) in paragraph at lines 63--64
 
 [6] [7] [8]
 
+LaTeX Warning: Citation 'SHAKYA2023' on page 9 undefined on input line 127.
+
+
+LaTeX Warning: Citation 'wang2024' on page 9 undefined on input line 127.
+
+
 ./mainmatter/literature.tex:138: Package glossaries Error: Glossary entry `a3c'
  has not been defined.
 
@@ -1977,36 +1983,34 @@ L3 programming layer <2025-12-29>
  ***********
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 28567EFBA6EBC3C9232BCA5832A6CD2E;3106.
 
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                report
+(biblatex)                and rerun LaTeX afterwards.
 
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: F01A632CB020DA18F220C0FA8C3AE70B;3106
-(rerunfilecheck)             After:  28567EFBA6EBC3C9232BCA5832A6CD2E;3106.
 Package logreq Info: Writing requests to 'report.run.xml'.
 
 \openout1 = report.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 52503 strings out of 476081
+ 52491 strings out of 476081
  100000,2373549 words of node,token memory allocated
  20375 words of node memory still in use:
    370 hlist, 35 vlist, 2 rule, 38 disc, 22 local_par, 6 math, 560 glue, 51 kern
 , 48 penalty, 498 glyph, 1293 attribute, 122 glue_spec, 1293 attribute_list, 24 
 write, 22 save_pos, 737 pdf_literal, 5 pdf_action, 22 pdf_colorstack nodes
-   avail lists: 1:2,2:915,3:641,4:261,5:631,6:55,7:6940,8:60,9:542,10:18,11:651
- 73774 multiletter control sequences out of 65536+600000
+   avail lists: 1:2,2:915,3:641,4:262,5:631,6:55,7:6940,8:60,9:542,10:18,11:651
+ 73764 multiletter control sequences out of 65536+600000
  90 fonts using 28016983 bytes
  99i,12n,105p,2541b,1362s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-warning  (pdf backend): unreferenced destination with name 'table.caption.17'
-
-warning  (pdf backend): unreferenced destination with name 'chapter*.24'
 <c:/users/poopy/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono10-
 regular.otf><./fonts/cambria/CAMBRIAZ.TTF><./fonts/cambria/CAMBRIAI.TTF><./fonts
 /cambria/CAMBRIAB.TTF><./fonts/cambria/CAMBRIA.TTC><C:/Users/poopy/AppData/Local
@@ -2025,9 +2029,9 @@ ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/poop
 y/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Use
 rs/poopy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb>
-Output written on report.pdf (31 pages, 1886105 bytes).
+Output written on report.pdf (31 pages, 1886006 bytes).
 
-PDF statistics: 537 PDF objects out of 1000 (max. 8388607)
- 158 named destinations out of 1000 (max. 1048576)
+PDF statistics: 535 PDF objects out of 1000 (max. 8388607)
+ 156 named destinations out of 1000 (max. 1048576)
  176 words of extra memory for PDF output out of 10000 (max. 100000000)
 

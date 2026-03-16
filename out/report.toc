@@ -10,7 +10,6 @@
 \contentsline {section}{\numberline {3.3}Machine Learning}{8}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Supervised \& Unsupervised Learning}{8}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Reinforcement Learning}{9}{subsection.3.3.2}%
-\contentsline {paragraph}{Online vs.\ Offline Reinforcement Learning}{9}{section*.14}%
 \contentsline {subsubsection}{Online Algorithms}{10}{section*.14}%
 \contentsline {subsubsection}{Offline Algorithms}{13}{table.caption.15}%
 \contentsline {section}{\numberline {3.4}CFD-ANN Enriched Models}{15}{section.3.4}%
