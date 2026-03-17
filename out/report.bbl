@@ -581,6 +581,122 @@
       \verb https://arxiv.org/abs/1707.06347
       \endverb
     \endentry
+    \entry{SHAKYA2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=b34833a1d50101d23e408867f2307e25}{%
+           family={Shakya},
+           familyi={S\bibinitperiod},
+           given={Ashish\bibnamedelima Kumar},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=5f65402720bf32bc7af51be985603ce5}{%
+           family={Pillai},
+           familyi={P\bibinitperiod},
+           given={Gopinatha},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8c2d5644a854c1e5e3138cc922211c71}{%
+           family={Chakrabarty},
+           familyi={C\bibinitperiod},
+           given={Sohom},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9536d619454b3e8cad47e9957c469685}
+      \strng{fullhash}{9536d619454b3e8cad47e9957c469685}
+      \strng{fullhashraw}{9536d619454b3e8cad47e9957c469685}
+      \strng{bibnamehash}{9536d619454b3e8cad47e9957c469685}
+      \strng{authorbibnamehash}{9536d619454b3e8cad47e9957c469685}
+      \strng{authornamehash}{9536d619454b3e8cad47e9957c469685}
+      \strng{authorfullhash}{9536d619454b3e8cad47e9957c469685}
+      \strng{authorfullhashraw}{9536d619454b3e8cad47e9957c469685}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Reinforcement Learning (RL) is a machine learning (ML) technique to learn sequential decision-making in complex problems. RL is inspired by trial-and-error based human/animal learning. It can learn an optimal policy autonomously with knowledge obtained by continuous interaction with a stochastic dynamical environment. Problems considered virtually impossible to solve, such as learning to play video games just from pixel information, are now successfully solved using deep reinforcement learning. Without human intervention, RL agents can surpass human performance in challenging tasks. This review gives a broad overview of RL, covering its fundamental principles, essential methods, and illustrative applications. The authors aim to develop an initial reference point for researchers commencing their research work in RL. In this review, the authors cover some fundamental model-free RL algorithms and pathbreaking function approximation-based deep RL (DRL) algorithms for complex uncertain tasks with continuous action and state spaces, making RL useful in various interdisciplinary fields. This article also provides a brief review of model-based and multi-agent RL approaches. Finally, some promising research directions for RL are briefly presented.}
+      \field{issn}{0957-4174}
+      \field{journaltitle}{Expert Systems with Applications}
+      \field{title}{Reinforcement learning algorithms: A brief survey}
+      \field{volume}{231}
+      \field{year}{2023}
+      \field{pages}{120495}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.eswa.2023.120495
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0957417423009971
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0957417423009971
+      \endverb
+      \keyw{Reinforcement learning,Stochastic optimal control,Function approximation,Deep Reinforcement Learning (DRL)}
+    \endentry
+    \entry{wang2024}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=d629ba40b56b1f3070362206453e1639}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=99de65e5476005b6deb7b87170202067}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Sen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4466479d2e901f6bad2628f9f8073729}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Xingxing},
+           giveni={X\bibinitperiod}}}%
+        {{hash=22c1da201ea3659a7bba1b97777ef3c7}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Dawei},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8f545adbbc9597d442aefe758183c125}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Jincai},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b6fc78834b479731029a5edb14fd5de0}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=71d8f67795a219bd82bcdf9afdecec87}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={Bin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=775f8edf0cf07927fd66c2b604912106}{%
+           family={Miao},
+           familyi={M\bibinitperiod},
+           given={Qiguang},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{c231b80e9ea8c07cfe58905c8148087d}
+      \strng{fullhash}{e56c05b403b8e2295307f65a396b5419}
+      \strng{fullhashraw}{e56c05b403b8e2295307f65a396b5419}
+      \strng{bibnamehash}{c231b80e9ea8c07cfe58905c8148087d}
+      \strng{authorbibnamehash}{c231b80e9ea8c07cfe58905c8148087d}
+      \strng{authornamehash}{c231b80e9ea8c07cfe58905c8148087d}
+      \strng{authorfullhash}{e56c05b403b8e2295307f65a396b5419}
+      \strng{authorfullhashraw}{e56c05b403b8e2295307f65a396b5419}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Neural Networks and Learning Systems}
+      \field{number}{4}
+      \field{title}{Deep Reinforcement Learning: A Survey}
+      \field{volume}{35}
+      \field{year}{2024}
+      \field{pages}{5064\bibrangedash 5078}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/TNNLS.2022.3207346
+      \endverb
+      \keyw{Task analysis;Mathematical models;Deep learning;Trajectory;Behavioral sciences;Q-learning;Dynamic programming;Deep learning;deep reinforcement learning (DRL);imitation learning;maximum entropy deep reinforcement learning (RL);policy gradient;value function}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

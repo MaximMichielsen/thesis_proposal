@@ -6,13 +6,36 @@
 
 \todo[inline]{add citations where needed}
 
-\gls{cfd} simulations are used to solve various fluid dynamic problems. An example of applying \gls{cfd} simulations is the Navier-Stokes equations. These equations govern the flow of fluids over bodies (or without them) and are thus important in many engineering practices, from aeronautical to automotive. Unfortunately, no analytical solution exists, so engineers must approximate these equations numerically. The most accurate numerical method is \gls{dns}. Here, the solver resolves all flow scales, yielding the most accurate results but at a high computational cost. In fact, representing all scales increases computational costs very quickly. The smallest scales, also known as the Kolmogorov microscales, are all proportionate to the Reynolds number, $Re$. For three-dimensional \gls{dns}, costs are proportionate to $Re^3$. Thus, for large-scale flow problems, \gls{dns} is computationally infeasible, and it is currently used primarily as a research tool for studying turbulent phenomena.
+\gls{cfd} simulations are used to solve various fluid dynamic problems.
+An example of applying \gls{cfd} simulations is the Navier-Stokes equations.
+These equations govern the flow of fluids over bodies (or without them) and are thus important in many engineering practices, from aeronautical to automotive.
+Unfortunately, no analytical solution exists, so engineers must approximate these equations numerically.\ The most accurate numerical method is \gls{dns}.
+Here, the solver resolves all flow scales, yielding the most accurate results but at a high computational cost.
+In fact, representing all scales increases computational costs very quickly.
+The smallest scales, also known as the Kolmogorov microscales, are all proportionate to the Reynolds number, $Re$.
+For three-dimensional \gls{dns}, costs are proportionate to $Re^3$.
+Thus, for large-scale flow problems, \gls{dns} is computationally infeasible, and it is currently used primarily as a research tool for studying turbulent phenomena.
 
-To reduce computational costs, researchers have derived a method that splits the solution into a mean and a fluctuating part. This method, called \gls{rans}, is among the least expensive simulations in the \gls{cfd} landscape. Here, the solver computes the mean solution while accounting for fluctuations through modeling. Despite various turbulence models, \gls{rans} simulations struggle to incorporate the influence of the fluctuating flow components on the mean, especially for highly dynamic and wall-bounded problems.
+To reduce computational costs, researchers have derived a method that splits the solution into a mean and a fluctuating part.
+This method, called \gls{rans}, is among the least expensive simulations in the \gls{cfd} landscape.
+Here, the solver computes the mean solution while accounting for fluctuations through modeling.
+Despite various turbulence models, \gls{rans} simulations struggle to incorporate the influence of the fluctuating flow components on the mean, especially for highly dynamic and wall-bounded problems.
 
-A third method of solving fluid dynamics problems is to use \gls{les}. This method lies between the low-fidelity, cheap \gls{rans} simulations and the high-fidelity, expensive \gls{dns} simulations. Similarly to \gls{dns}, the solver resolves the flow scales, but only the largest, most influential ones. \gls{les} is thus a \gls{dns}, with a spatial filter applied, which removes the smaller, and more expensive scales. This approach makes \gls{les} much cheaper than \gls{dns}, but it does remove some physical fidelity. Naturally, if greater physical accuracy is required, the filter width can be reduced, allowing \gls{les} to approach and eventually become \gls{dns}.
+A third method of solving fluid dynamics problems is to use \gls{les}.
+This method lies between the low-fidelity, cheap \gls{rans} simulations and the high-fidelity, expensive \gls{dns} simulations.
+Similarly to \gls{dns}, the solver resolves the flow scales, but only the largest, most influential ones. \gls{les} is thus a \gls{dns}, with a spatial filter applied, which removes the smaller, and more expensive scales.
+This approach makes \gls{les} much cheaper than \gls{dns}, but it does remove some physical fidelity.
+Naturally, if greater physical accuracy is required, the filter width can be reduced, allowing \gls{les} to approach and eventually become \gls{dns}.
 
-This approach splits up the solution into the larger scales, also known as the resolved scales, and the smaller, \gls{sgs} terms. The solver models the influence of \gls{sgs} terms. Modeling is necessary because smaller scales serve two important functions. One, they drain the flow field of energy through dissipative phenomena. Two, in specific scenarios, they re-transfer energy to the larger scales through a process known as \emph{backscatter}. The standard modeling approach is to use the Smagorinsky model. This pioneering model is relatively simple and correctly captures energy cascades in simulations, making it a great option. However, the model has several drawbacks, including limited wall behavior, no backscatter, and a tendency to be overly dissipative. Other models exist, such as the Dynamic Smagorinsky and Scale Similarity models.
+This approach splits up the solution into the larger scales, also known as the resolved scales, and the smaller, \gls{sgs} terms.
+The solver models the influence of \gls{sgs} terms.
+Modeling is necessary because smaller scales serve two important functions.
+One, they drain the flow field of energy through dissipative phenomena.
+Two, in specific scenarios, they re-transfer energy to the larger scales through a process known as \emph{backscatter}.
+The standard modeling approach is to use the Smagorinsky model.
+This pioneering model is relatively simple and correctly captures energy cascades in simulations, making it a great option.
+However, the model has several drawbacks, including limited wall behavior, no backscatter, and a tendency to be overly dissipative.
+Other models exist, such as the Dynamic Smagorinsky and Scale Similarity models.
 
 The problem with classical \gls{les} is that the solver applies the influence of the model to the complete flow domain, which tends to make simulations overly dissipative. A different approach, developed by Hughes, uses the variational multiscale framework.
 
@@ -124,7 +147,7 @@ Unsupervised learning is an approach in which a model learns patterns from unlab
 
 \subsection{Reinforcement Learning} \label{subsec:reinforcement}
 
-Surveys~\cite{SHAKYA2023, wang2024}
+Surveys~\cite{SHAKYA2023,wang2024}
 
 \todo[inline]{add citations where needed}
 
