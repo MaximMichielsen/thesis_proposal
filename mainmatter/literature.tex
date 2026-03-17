@@ -49,7 +49,8 @@ The problem with classical \gls{les} is that the solver applies the influence of
 \todo[inline]{add citations where needed}
 
 %Other approach + Filtering inherent to framework (splitting solution) + advantages
-\gls{vms} is an unconventional approach to \gls{les}. Instead of applying a low-pass spatial filter, the approach performs a finite-element projection, which splits the continuous unknown into a resolvable component and a subgrid component. This projection naturally introduces the spatial filter. The framework has several advantages over a classical \gls{les} formulation. First, the effect of modeling is confined only to the smallest resolved scales, which can reduce the effect of modeling errors. Second, with a stronger mathematical foundation, it can perform better in wall-bounded geometries.
+\gls{vms} is an unconventional approach to \gls{les}.
+Instead of applying a low-pass spatial filter, the approach performs a finite-element projection, which splits the continuous unknown into a resolvable component and a subgrid component. This projection naturally introduces the spatial filter. The framework has several advantages over a classical \gls{les} formulation. First, the effect of modeling is confined only to the smallest resolved scales, which can reduce the effect of modeling errors. Second, with a stronger mathematical foundation, it can perform better in wall-bounded geometries.
 
 Consider a general nonlinear \gls{pde} written in residual form:
 
@@ -57,7 +58,8 @@ Consider a general nonlinear \gls{pde} written in residual form:
     \mathcal{R}(u) = 0
 \end{equation}
 
-where $u \in \mathcal{V}$ is the solution in a suitable function space (e.g.\ Sobolev space) and $\mathcal{R}(u)$ is the residual operator. The variational formulation reads:
+where $u \in \mathcal{V}$ is the solution in a suitable function space (e.g.\ Sobolev space) and $\mathcal{R}(u)$ is the residual operator.
+The variational formulation reads:
 
 \noindent Find $u \in \mathcal{V}$ such that
 
