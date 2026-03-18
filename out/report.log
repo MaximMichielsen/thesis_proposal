@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.3.17)  17 MAR 2026 11:49
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.3.17)  18 MAR 2026 17:32
  restricted system commands enabled.
  file:line:error style messages enabled.
 **report.tex
@@ -1926,40 +1926,36 @@ Chapter 3.
 [4
 
 ] [5]
-Overfull \hbox (1.16975pt too wide) in paragraph at lines 72--73
+Overfull \hbox (1.16975pt too wide) in paragraph at lines 88--89
 \TU/Cambria(0)/m/n/10.95 form tasks like learn-ing, rea-son-ing, problem-solving
 , and decision-making, and is cur-rently rapidly
  []
 
 [6] [7] [8]
 
-./mainmatter/literature.tex:147: Package glossaries Error: Glossary entry `a3c'
+./mainmatter/literature.tex:163: Package glossaries Error: Glossary entry `a3c'
  has not been defined.
 
 See the glossaries package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.147 ...h as \gls{ppo}, \gls{sac}, and \gls{a3c} 
+l.163 ...h as \gls{ppo}, \gls{sac}, and \gls{a3c} 
                                                   fall into this category an...
 You need to define a glossary entry before you can use it.
 
 [9] [10] [11]
-Overfull \hbox (2.56912pt too wide) in paragraph at lines 248--249
+Overfull \hbox (2.56912pt too wide) in paragraph at lines 264--265
 \TU/Cambria(0)/m/n/10.95 widely used re-in-force-ment learn-ing al-go-rithms for
  con-tin-u-ous con-trol and large-scale pol-icy learn-
  []
 
 [12]
-Overfull \hbox (10.53146pt too wide) in paragraph at lines 281--293
+Overfull \hbox (10.53146pt too wide) in paragraph at lines 297--309
  [][] 
  []
 
-[13] [14] [15]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./mainmatter/research_plan.tex [16] [17]
+[13] [14] [15] [16]) (./mainmatter/research_plan.tex [17]
 Chapter 4.
 [18
 
@@ -1975,24 +1971,31 @@ Appendix A.
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 28567EFBA6EBC3C9232BCA5832A6CD2E;3106.
+
+Package biblatex Warning: Please rerun LaTeX.
+
 Package logreq Info: Writing requests to 'report.run.xml'.
 
 \openout1 = report.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 52507 strings out of 476081
+ 52517 strings out of 476081
  100000,2373549 words of node,token memory allocated
  20395 words of node memory still in use:
    370 hlist, 35 vlist, 2 rule, 38 disc, 22 local_par, 6 math, 560 glue, 51 kern
 , 48 penalty, 498 glyph, 1295 attribute, 122 glue_spec, 1295 attribute_list, 24 
 write, 22 save_pos, 737 pdf_literal, 7 pdf_action, 22 pdf_colorstack nodes
-   avail lists: 1:2,2:915,3:760,4:262,5:635,6:53,7:6942,8:67,9:542,10:18,11:651
- 73778 multiletter control sequences out of 65536+600000
+   avail lists: 1:2,2:915,3:760,4:263,5:722,6:55,7:7381,8:67,9:542,10:18,11:716
+ 73787 multiletter control sequences out of 65536+600000
  92 fonts using 28892359 bytes
- 99i,12n,105p,2541b,1991s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,105p,2541b,1998s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/poopy/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono10-
 regular.otf><./fonts/cambria/CAMBRIAZ.TTF><./fonts/cambria/CAMBRIAI.TTF><./fonts
 /cambria/CAMBRIAB.TTF><./fonts/cambria/CAMBRIA.TTC><C:/Users/poopy/AppData/Local
@@ -2010,9 +2013,9 @@ ts/cm/cmsy10.pfb><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmsy6.pfb><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmsy8.pfb><C:/Users/poopy/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (31 pages, 1891058 bytes).
+Output written on report.pdf (31 pages, 1893464 bytes).
 
-PDF statistics: 544 PDF objects out of 1000 (max. 8388607)
- 158 named destinations out of 1000 (max. 1048576)
+PDF statistics: 548 PDF objects out of 1000 (max. 8388607)
+ 159 named destinations out of 1000 (max. 1048576)
  176 words of extra memory for PDF output out of 10000 (max. 100000000)
 

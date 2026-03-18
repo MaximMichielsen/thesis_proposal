@@ -630,6 +630,71 @@
       \endverb
       \keyw{Reinforcement learning,Stochastic optimal control,Function approximation,Deep Reinforcement Learning (DRL)}
     \endentry
+    \entry{Vollant2017}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=c75e2acec95d73240c60842b5324430c}{%
+           family={Vollant},
+           familyi={V\bibinitperiod},
+           given={Antoine},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ff8afcbd740b74526b9fb684fe9c19b7}{%
+           family={Balarac},
+           familyi={B\bibinitperiod},
+           given={Guillaume},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1b582b0d3b52502dc12054a314c07f64}{%
+           family={Corre},
+           familyi={C\bibinitperiod},
+           given={Christophe\bibnamedelima Eric},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=47be8cabc2f2bf99de9b429d40740e45}{%
+           family={Vollant},
+           familyi={V\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c09a2575d8887864fd648a6cbed5dcfb}{%
+           family={Balarac},
+           familyi={B\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2434dcd7e6ce8391a0eae0f5ebf0aec9}{%
+           family={Corre},
+           familyi={C\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b3fe2d4d0a03d1b3865427c0e935b95}
+      \strng{fullhash}{45c66eb993c2a451b2da1021788938a0}
+      \strng{fullhashraw}{45c66eb993c2a451b2da1021788938a0}
+      \strng{bibnamehash}{8b3fe2d4d0a03d1b3865427c0e935b95}
+      \strng{authorbibnamehash}{8b3fe2d4d0a03d1b3865427c0e935b95}
+      \strng{authornamehash}{8b3fe2d4d0a03d1b3865427c0e935b95}
+      \strng{authorfullhash}{45c66eb993c2a451b2da1021788938a0}
+      \strng{authorfullhashraw}{45c66eb993c2a451b2da1021788938a0}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This work is devoted to the exploration of new procedures for the development of subgrid-scale (SGS) models in the context of large-eddy simulation (LES) of a passive scalar. The starting idea is to combine the optimal estimator theory with machine-learning procedures. The concept of optimal estimator is then used to determine the most accurate set of input parameters (also called features in machine-learning terminology) to be used when deriving a model of the SGS scalar flux. The SGS model can be defined as a surrogate model built from this set of parameters by training an artificial neural network (ANN) on a database built by the filtering of direct numerical simulation (DNS) results. This procedure leads to a model with good structural performance. This allows to perform LES very close to the filtered DNS results, and showing an improvement in comparison with algebraic models. However, this first procedure does not control the functional performance of the SGS model and the model can fail when the flow configuration is different from the training DNS database. Another procedure is then proposed, where the functional form is imposed and the ANN used only to define the model coefficients. The training step is an optimization based on a multi-objective genetic algorithm allowing to simultaneously control the structural and functional performances of the generated model. The model obtained from this second procedure proves to be more robust, leading to accurate LES for different mixing conditions. This work is thus a first step to establish the concept of optimal estimator associated with machine-learning procedures as a useful tool for SGS model development.}
+      \field{issn}{1468-5248}
+      \field{issue}{9}
+      \field{journaltitle}{Journal of Turbulence LES˙OE Journal of Turbulence}
+      \field{title}{Subgrid-scale scalar flux modelling based on optimal estimation theory and machine-learning procedures Subgrid-scale scalar flux modelling based on optimal estimation theory and machine-learning procedures Subgrid-scale scalar flux modeling based on optimal estimation theory and machine-learning procedures}
+      \field{volume}{18}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 37}
+      \range{pages}{37}
+      \verb{doi}
+      \verb 10.1080/14685248.2017.1334907ï
+      \endverb
+      \verb{urlraw}
+      \verb http://www.tandfonline.com
+      \endverb
+      \verb{url}
+      \verb http://www.tandfonline.com
+      \endverb
+      \keyw{LES,artificial neural network (ANN),multi-objective genetic algorithm (MOGA),optimal estimator,subgrid-scale scalar flux modeling,surrogate function}
+    \endentry
     \entry{wang2024}{article}{}{}
       \name{author}{8}{}{%
         {{hash=d629ba40b56b1f3070362206453e1639}{%
