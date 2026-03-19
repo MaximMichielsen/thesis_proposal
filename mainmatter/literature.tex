@@ -488,6 +488,15 @@ They approached it using an unconstrained approach first, where the predictor ha
 Later, they switched to the constrained approach instead, where the predictor is now tasked with estimating coefficients of another model.
 Similarly to Robijns, they found that strong \emph{a priori} correlations between the \gls{sgs} are attainable, but using the predictor in an online simulation proved to remain an open problem~\cite{Vollant2017}.
 
+Similarly, Beck et al.~\cite{Beck2019} trained a neural network to predict the \emph{perfect} closure terms of a \gls{les}.
+This means it will also have to account for discretization effects.
+Training on \gls{dhit}, they show that the perfect closure terms are indeed learnable from data.
+In online tests, stability issues were present, similar to the \gls{lti}.
+To increase stability, they attempted two methods.
+One, a mixed model, similar to Bardina \todo{cite bardina}.
+Second, a projection of the perfect closure term prediction onto a stable, alternative formulation, for which they simply used the eddy viscosity method.
+With this, they achieved a model that is stable for \gls{les}, outperforming standard models in reproducing energy decay and spectra.
+However, it was not proposed as a final model, but rather a proof-of-concept.
 
 \subsection{Past Work at TU Delft} \label{subsec:past_work}
 

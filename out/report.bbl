@@ -19,6 +19,51 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{Beck2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=8e32212cf3086bf71dd51962fa3edc64}{%
+           family={Beck},
+           familyi={B\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=91dabc1eea889d0dbd5e49d27907aec1}{%
+           family={Flad},
+           familyi={F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ead2d12addfa151c7ce0b0409bf1976b}{%
+           family={Munz},
+           familyi={M\bibinitperiod},
+           given={Claus\bibnamedelima Dieter},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press Inc.}%
+      }
+      \strng{namehash}{dbd0ef519f63cab4bb1ab49f5cd3bbe1}
+      \strng{fullhash}{dbd0ef519f63cab4bb1ab49f5cd3bbe1}
+      \strng{fullhashraw}{dbd0ef519f63cab4bb1ab49f5cd3bbe1}
+      \strng{bibnamehash}{dbd0ef519f63cab4bb1ab49f5cd3bbe1}
+      \strng{authorbibnamehash}{dbd0ef519f63cab4bb1ab49f5cd3bbe1}
+      \strng{authornamehash}{dbd0ef519f63cab4bb1ab49f5cd3bbe1}
+      \strng{authorfullhash}{dbd0ef519f63cab4bb1ab49f5cd3bbe1}
+      \strng{authorfullhashraw}{dbd0ef519f63cab4bb1ab49f5cd3bbe1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this work, we present a novel data-based approach to turbulence modeling for Large Eddy Simulation (LES) by artificial neural networks. We define the perfect LES formulation including the discretization operators and derive the associated perfect closure terms. We then generate training data for these terms from direct numerical simulations of decaying homogeneous isotropic turbulence. We design and train artificial neural networks based on local convolution filters to predict the underlying unknown non-linear mapping from the coarse grid quantities to the closure terms without a priori assumptions. We show that selecting both the coarse grid primitive variables as well as the coarse grid LES operator as input features significantly improves training results. All investigated networks are able to generalize from the data and learn approximations with a cross correlation of up to 47% and even 73% for the inner elements, demonstrating that the perfect closure can indeed be learned from the provided coarse grid data. Since the learned closure terms are approximate, a direct application leads to stability issues. We show how to employ the artificial neural network output to construct stable and accurate models. The best results have been achieved with a data-informed, temporally and spatially adaptive eddy viscosity closure. While further investigations into the generalizability of the approach is warranted, this work thus represents a starting point for further research into data-driven, optimal turbulence models.}
+      \field{issn}{10902716}
+      \field{journaltitle}{Journal of Computational Physics}
+      \field{month}{12}
+      \field{title}{Deep neural networks for data-driven LES closure models}
+      \field{volume}{398}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1016/j.jcp.2019.108910
+      \endverb
+      \keyw{Convolutional neural networks,Data-driven LES model,Discontinuous Galerkin method,Ideal large eddy simulation,Turbulence modeling}
+    \endentry
     \entry{Bettini2023}{report}{}{}
       \name{author}{1}{}{%
         {{hash=5b55a8206f0401bf8246a7dadec74b59}{%

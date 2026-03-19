@@ -214,3 +214,17 @@ abstract = {Reinforcement Learning (RL) is a machine learning (ML) technique to 
    url = {http://www.tandfonline.com},
    year = {2017}
 }
+
+@article{Beck2019,
+   abstract = {In this work, we present a novel data-based approach to turbulence modeling for Large Eddy Simulation (LES) by artificial neural networks. We define the perfect LES formulation including the discretization operators and derive the associated perfect closure terms. We then generate training data for these terms from direct numerical simulations of decaying homogeneous isotropic turbulence. We design and train artificial neural networks based on local convolution filters to predict the underlying unknown non-linear mapping from the coarse grid quantities to the closure terms without a priori assumptions. We show that selecting both the coarse grid primitive variables as well as the coarse grid LES operator as input features significantly improves training results. All investigated networks are able to generalize from the data and learn approximations with a cross correlation of up to 47% and even 73% for the inner elements, demonstrating that the perfect closure can indeed be learned from the provided coarse grid data. Since the learned closure terms are approximate, a direct application leads to stability issues. We show how to employ the artificial neural network output to construct stable and accurate models. The best results have been achieved with a data-informed, temporally and spatially adaptive eddy viscosity closure. While further investigations into the generalizability of the approach is warranted, this work thus represents a starting point for further research into data-driven, optimal turbulence models.},
+   author = {Andrea Beck and David Flad and Claus Dieter Munz},
+   doi = {10.1016/j.jcp.2019.108910},
+   issn = {10902716},
+   journal = {Journal of Computational Physics},
+   keywords = {Convolutional neural networks,Data-driven LES model,Discontinuous Galerkin method,Ideal large eddy simulation,Turbulence modeling},
+   month = {12},
+   publisher = {Academic Press Inc.},
+   title = {Deep neural networks for data-driven LES closure models},
+   volume = {398},
+   year = {2019}
+}
